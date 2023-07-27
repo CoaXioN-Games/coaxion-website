@@ -3,6 +3,10 @@ body{
 	background-image: url(./res/bg.png);
 }
 
+h1{
+	font-family: ikkle;
+}
+
 #screenCover{
 	position: fixed;
 	margin: -8px;
@@ -16,6 +20,7 @@ body{
 	image-rendering: pixelated;
 	z-index: 2;
 	transition: all 0.5s ease;
+	cursor: pointer;
 }
 
 .logo{
@@ -168,7 +173,10 @@ body{
 
 
 
-
+@font-face{
+	font-family: ikkle;
+	src: url(./res/ikkle-mono.ttf);
+}
 
 
 /*scrollbar land*/

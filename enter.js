@@ -1,9 +1,9 @@
 function openEnterScreen() {
-	screen = document.getElementById("window");
+	/*screen = document.getElementById("window");
 	newElem = document.createElement("div");
 	newElem.setAttribute("id","screenCover");
 	newElem.setAttribute("onclick","closeEnterScreen()");
-	screen.append(newElem);
+	screen.append(newElem);*/
 	document.getElementsByTagName("body")[0].style.overflow = "hidden";
 };
 
