@@ -8,6 +8,8 @@ body{
 }
 
 .topBar{
+	position: fixed;
+	width: -webkit-fill-available;
 	margin: -8px;
 	margin-bottom: 40px;
 	padding: 10px;
@@ -17,6 +19,17 @@ body{
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.57));
+}
+
+.topFiller{
+	height: 140px;
+}
+
+@media screen and (max-width: 1053px) {
+    .topFiller {
+        height: 220px;
+    }
 }
 
 .topBarSpacer{
@@ -33,10 +46,24 @@ body{
 	height: 60px;
 	width: 60px;
 	margin: 8px;
+	background-position: center;
 	background-size: contain;
 	filter: drop-shadow(2px 4px 6px black);
 	transition: all 0.5s ease;
+	background-repeat: no-repeat;
 }
+
+.socialIcon{
+	height: 60px;
+	width: 60px;
+	margin: 8px;
+	background-position: center;
+	background-size: contain;
+	transition: all 0.5s ease;
+	background-repeat: no-repeat;
+}
+
+/*game icons*/
 
 #dmcrIcon{
 	background-image: url(./res/dmcrIconGrey.png);
@@ -68,13 +95,95 @@ body{
 	filter: drop-shadow(0px 0px 10px orangered);
 }
 
+/*social icons*/
+
+#twitterIcon{
+	background-image: url(./res/twitterIconGrey.png);
+}
+
+#twitterIcon:hover{
+	background-image: url(./res/twitterIcon.png);
+	cursor: pointer;
+	/*filter: drop-shadow(0px 0px 8px chartreuse);*/
+}
+
+#youtubeIcon{
+	background-image: url(./res/youtubeIconGrey.png);
+}
+
+#youtubeIcon:hover{
+	background-image: url(./res/youtubeIcon.png);
+	cursor: pointer;
+	/*filter: drop-shadow(0px 0px 8px deeppink);*/
+}
+
+#steamIcon{
+	background-image: url(./res/steamIconGrey.png);
+}
+
+#steamIcon:hover{
+	background-image: url(./res/steamIcon.png);
+	cursor: pointer;
+	/*filter: drop-shadow(0px 0px 8px dodgerblue);*/
+}
+
+
 .infoCard{
 	font-family: verdana;
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 40px;
 	padding: 20px;
 	background-color: #141414;
 	color: white;
 	border-radius: 4px;
+}
+
+#footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: grey;
+	margin-top: 30px;
+	margin: -8px;
+	height: 100px;
+	background-color: #141414;
+}
+
+
+
+
+
+
+/*scrollbar land*/
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #494949;
+  border-radius: 0px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
 }
