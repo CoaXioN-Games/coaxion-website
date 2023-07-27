@@ -1,6 +1,6 @@
 body{
 	background-color: #141414;
-	background-image: url(/res/bg.png);
+	background-image: url(./res/bg.png);
 }
 
 .logo{
@@ -39,31 +39,31 @@ body{
 }
 
 #dmcrIcon{
-	background-image: url(/res/dmcrIconGrey.png);
+	background-image: url(./res/dmcrIconGrey.png);
 }
 
 #dmcrIcon:hover{
-	background-image: url(/res/dmcrIcon.png);
+	background-image: url(./res/dmcrIcon.png);
 	cursor: pointer;
 	filter: drop-shadow(0px 0px 8px red);
 }
 
 #lfIcon{
-	background-image: url(/res/lfIconGrey.png);
+	background-image: url(./res/lfIconGrey.png);
 }
 
 #lfIcon:hover{
-	background-image: url(/res/lfIcon.png);
+	background-image: url(./res/lfIcon.png);
 	cursor: pointer;
 	filter: drop-shadow(0px 0px 10px magenta);
 }
 
 #tepIcon{
-	background-image: url(/res/tepIconGrey.png);
+	background-image: url(./res/tepIconGrey.png);
 }
 
 #tepIcon:hover{
-	background-image: url(/res/tepIcon.png);
+	background-image: url(./res/tepIcon.png);
 	cursor: pointer;
 	filter: drop-shadow(0px 0px 10px orangered);
 }
