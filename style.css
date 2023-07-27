@@ -3,6 +3,21 @@ body{
 	background-image: url(./res/bg.png);
 }
 
+#screenCover{
+	position: fixed;
+	margin: -8px;
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+	background-image: url(./res/enterScreen.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 500px;
+	image-rendering: pixelated;
+	z-index: 2;
+	transition: all 0.5s ease;
+}
+
 .logo{
 	height: 90px;
 }
@@ -28,7 +43,7 @@ body{
 
 @media screen and (max-width: 1053px) {
     .topFiller {
-        height: 220px;
+        height: 200px;
     }
 }
 
@@ -54,8 +69,8 @@ body{
 }
 
 .socialIcon{
-	height: 60px;
-	width: 60px;
+	height: 40px;
+	width: 40px;
 	margin: 8px;
 	background-position: center;
 	background-size: contain;
