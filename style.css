@@ -62,6 +62,20 @@ h1{
 	width: 800px;
 }
 
+.playbackButton{
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	background-image: url(./res/vibing.gif);
+	background-size: contain;
+	background-position: center;
+	filter: invert(1);
+	mix-blend-mode: screen;
+	cursor: pointer;
+}
+
 .modIcon{
 	height: 60px;
 	width: 60px;
