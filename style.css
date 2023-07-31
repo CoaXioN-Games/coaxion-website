@@ -1,10 +1,15 @@
 body{
 	background-color: #141414;
-	background-image: url(./res/bg.png);
 }
 
 h1{
 	font-family: ikkle;
+}
+
+#contentWrap{
+	margin: -8px;
+	padding: 8px;
+	background-image: url(./res/bg.png);
 }
 
 #screenCover{
