@@ -130,3 +130,21 @@ function resetIcons(){
 	lfIcon.style.backgroundImage = "url('./res/lfIconGrey.png')";
 	tepIcon.style.backgroundImage = "url('./res/tepIconGrey.png')";
 };
+
+
+
+
+//mobile scroll physics
+if (screen.width < 1053){
+	window.onscroll = function(e) {
+	  // print "false" if direction is down and "true" if up
+	  let scrollingDown = this.oldScroll < this.scrollY;
+	  this.oldScroll = this.scrollY;
+	  console.log(scrollingDown);
+	  if (scrollingDown === true){
+		  document.getElementsByClassName('topBar')[0].style.top = '-100px';
+	  } else {
+		  document.getElementsByClassName('topBar')[0].style.top = '0px';
+	  };
+	};
+};

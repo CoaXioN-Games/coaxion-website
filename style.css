@@ -31,6 +31,7 @@ p{
 	z-index: 4;
 	transition: all 0.5s ease;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
 #transitionScreen{
@@ -54,7 +55,9 @@ p{
 
 .logo{
 	height: 90px;
+	padding-top: 10px;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .topBar{
@@ -71,15 +74,19 @@ p{
 	flex-wrap: wrap;
 	justify-content: space-between;
 	filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.57));
+	top: 0px;
+	transition: all .75s ease;
 }
 
 .topFiller{
 	height: 140px;
+	margin-top: 0px;
 }
 
 @media screen and (max-width: 1053px) {
     .topFiller {
         height: 200px;
+		transition: all 1s ease;
     }
 }
 
@@ -116,6 +123,7 @@ p{
 	filter: drop-shadow(2px 4px 6px black);
 	transition: all 0.5s ease;
 	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .socialIcon{
@@ -126,6 +134,7 @@ p{
 	background-size: contain;
 	transition: all 0.5s ease;
 	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
 }
 
 /*game icons*/
@@ -158,6 +167,18 @@ p{
 	background-image: url(./res/tepIcon.png) !important;
 	cursor: pointer;
 	filter: drop-shadow(0px 0px 10px orangered);
+}
+
+@media screen and (max-width: 1053px) {
+    #tepIcon:hover{
+		filter: drop-shadow(2px 4px 6px black);
+	}
+	#dmcrIcon:hover{
+		filter: drop-shadow(2px 4px 6px black);
+	}
+	#lfIcon:hover{
+		filter: drop-shadow(2px 4px 6px black);
+	}
 }
 
 /*social icons*/
