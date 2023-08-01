@@ -3,6 +3,7 @@
     <head>
 	  <title>Coaxion</title>
 	  <meta name="keywords" content="coaxion">
+	  <meta name="description" content="Developing games you'll love.">
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="./style.css">
@@ -23,17 +24,17 @@
 	  <div class="playbackButton" onclick="music()">
 	  </div>
 		<div class="topBar">
-			<div class="logoDiv">
+			<div class="logoDiv" onclick="loadPageContents('home'); transitionScreen();">
 				<img src="./res/coaxvectorblackbg.svg" alt="coaxion" class="logo">
 			</div>
 			<div class="topBarSpacer">
 			</div>
 			<div class="shortcuts">
-				<div class="modIcon" id="dmcrIcon">
+				<div class="modIcon" id="dmcrIcon" onclick="loadPageContents('deathmatch-classic-refragged'); transitionScreen();">
 				</div>
-				<div class="modIcon" id="lfIcon">
+				<div class="modIcon" id="lfIcon" onclick="loadPageContents('lambda-fortress'); transitionScreen();">
 				</div>
-				<div class="modIcon" id="tepIcon">
+				<div class="modIcon" id="tepIcon" onclick="loadPageContents('the-espionage-project'); transitionScreen();">
 				</div>
 			</div>
 			<div class="topBarSpacer">
@@ -43,20 +44,8 @@
 		</div>
 		<div id="contentWrap">
 			<div class="topFiller"></div>
-			<div class="infoCard">
-				<h1>to do and notes and stuff</h1>
-				<p>hover sounds</p>
-				<p>page load in page with url query</p>
-				<p>replace temp music</p>
-				<p>optimize buttons so they only use one image instead of two</p>
-				<p>more stuff i don rember</p>
-			</div>
-			<div class="infoCard">
-				<h1>Hi! real gaming</h1>
-				<p>wip</p>
-				<br>
-				<p>This is just filler so the footer doesn't look too weird</p>
-				<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div id="infoCards">
+			<!--Content goes here--->
 			</div>
 		</div>
 		<footer id="footer">

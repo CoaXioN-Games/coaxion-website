@@ -3,7 +3,12 @@ body{
 }
 
 h1{
-	font-family: ikkle;
+	font-family: nasalization;
+	filter: drop-shadow(0px 0px 4px wheat);
+}
+
+p{
+	font-family: coolvetica;
 }
 
 #contentWrap{
@@ -23,17 +28,19 @@ h1{
 	background-repeat: no-repeat;
 	background-size: 500px;
 	image-rendering: pixelated;
-	z-index: 2;
+	z-index: 3;
 	transition: all 0.5s ease;
 	cursor: pointer;
 }
 
 .logo{
 	height: 90px;
+	cursor: pointer;
 }
 
 .topBar{
 	position: fixed;
+	z-index: 2;
 	width: -webkit-fill-available;
 	margin: -8px;
 	margin-bottom: 40px;
@@ -195,6 +202,16 @@ h1{
 @font-face{
 	font-family: ikkle;
 	src: url(./res/ikkle-mono.ttf);
+}
+
+@font-face{
+	font-family: nasalization;
+	src: url(./res/nasalization-rg.otf);
+}
+
+@font-face{
+	font-family: coolvetica;
+	src: url(./res/coolvetica-rg.otf);
 }
 
 
