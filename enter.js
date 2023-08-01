@@ -83,11 +83,11 @@ function loadPageContents(name) {
 			pageSpecificChanges(name);
 		});
 	} else {
-		console.log('iran');
+		console.log('i ran');
 		const url = new URL(window.location);
-		url.searchParams.set('', 'error');
+		url.searchParams.set('', 'home');
 		window.history.pushState({}, '', url);
-		loadPageContents('error');
+		loadPageContents('home');
 	};
 };
 
