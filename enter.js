@@ -1,4 +1,4 @@
-let mainMusic = new Audio('./res/5Limbs-Ninja_Killer.mp3');
+
 
 
 //old stuff but now just hides scrollbar
@@ -46,6 +46,8 @@ window.onload = function(){
 
 
 //music
+let mainMusic = new Audio('./res/5Limbs-Ninja_Killer.mp3');
+let click = new Audio('./res/click.mp3');
 
 function music() {
 	if (mainMusic.paused === false){
@@ -57,6 +59,10 @@ function music() {
 	}
 };
 
+
+function clickSound(){
+	click.play();
+};
 
 
 //page switching

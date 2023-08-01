@@ -116,7 +116,7 @@ p{
 }
 
 #dmcrIcon:hover{
-	background-image: url(./res/dmcrIcon.png);
+	background-image: url(./res/dmcrIcon.png) !important;
 	cursor: pointer;
 	filter: drop-shadow(0px 0px 8px red);
 }
@@ -126,7 +126,7 @@ p{
 }
 
 #lfIcon:hover{
-	background-image: url(./res/lfIcon.png);
+	background-image: url(./res/lfIcon.png) !important;
 	cursor: pointer;
 	filter: drop-shadow(0px 0px 10px magenta);
 }
@@ -136,7 +136,7 @@ p{
 }
 
 #tepIcon:hover{
-	background-image: url(./res/tepIcon.png);
+	background-image: url(./res/tepIcon.png) !important;
 	cursor: pointer;
 	filter: drop-shadow(0px 0px 10px orangered);
 }
