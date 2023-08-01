@@ -20,7 +20,7 @@ p{
 #screenCover{
 	position: fixed;
 	margin: -8px;
-	height: 100vh;
+	height: 101vh;
 	width: 100vw;
 	background-color: black;
 	background-image: url(./res/enterScreen.gif);
@@ -28,9 +28,28 @@ p{
 	background-repeat: no-repeat;
 	background-size: 500px;
 	image-rendering: pixelated;
-	z-index: 3;
+	z-index: 4;
 	transition: all 0.5s ease;
 	cursor: pointer;
+}
+
+#transitionScreen{
+	position: fixed;
+	margin: -40px;
+	padding: 40px;
+	height: 101vh;
+	width: 100vw;
+	background-color: black;
+	background-image: url(./res/transition.gif);
+	filter: saturate(0);
+	transform: scaleY(-1);
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	pointer-events: none;
+	opacity: 0;
+	display: none;
 }
 
 .logo{
@@ -40,7 +59,7 @@ p{
 
 .topBar{
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 	width: -webkit-fill-available;
 	margin: -8px;
 	margin-bottom: 40px;

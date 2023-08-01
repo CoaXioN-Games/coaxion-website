@@ -8,11 +8,7 @@ function openEnterScreen() {
 
 //transition effect
 function transitionScreen(){
-	screenCover = document.getElementById('screenCover');
-	screenCover.style.pointerEvents = "none";
-	screenCover.style.backgroundImage = "url('./res/transition.gif')";
-	screenCover.style.filter = "saturate(0)";
-	screenCover.style.backgroundSize = "cover";
+	screenCover = document.getElementById('transitionScreen');
 	screenCover.style.opacity = .25;
 	screenCover.style.display = "block";
 	setTimeout(()=>{
