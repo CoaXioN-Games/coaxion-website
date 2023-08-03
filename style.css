@@ -36,6 +36,7 @@ p{
 }
 
 #transitionScreen{
+	z-index: 2;
 	position: fixed;
 	margin: -40px;
 	padding: 40px;
