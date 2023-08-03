@@ -42,7 +42,7 @@ window.onload = function(){
 
 
 //music
-let mainMusic = new Audio('./res/5Limbs-Ninja_Killer.mp3');
+let mainMusic = new Audio('./res/Crack_a_Lack-N+(Handheld).mp3');
 let click = new Audio('./res/click.mp3');
 
 function music() {
