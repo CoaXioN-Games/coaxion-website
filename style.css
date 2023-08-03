@@ -15,6 +15,7 @@ p{
 	margin: -8px;
 	padding: 8px;
 	background-image: url(./res/bg.png);
+	background-attachment: fixed;
 }
 
 #screenCover{
@@ -235,6 +236,13 @@ p{
 	margin: -8px;
 	height: 100px;
 	background-color: #141414;
+}
+
+
+/*blog stuff*/
+#articlecontent img{
+	width: -webkit-fill-available;
+	height: auto;
 }
 
 

@@ -69,21 +69,38 @@ url = window.location.href;
 uri = url.substring(url.search("=") +1 , url.length);
 
 function loadPageContents(name) {
-	console.log(name);
-	if (name === 'home' || name === 'deathmatch-classic-refragged' || name === 'lambda-fortress' || name === 'the-espionage-project' || name === 'error'){
-		//changes url
-		const url = new URL(window.location);
-		url.searchParams.set('', [name]);
-		window.history.pushState({}, '', url);
+	//changes url
+	const url = new URL(window.location);
+	url.searchParams.set('', [name]);
+	window.history.pushState({}, '', url);
+	if (name === 'home' || name === 'deathmatch_classic_refragged' || name === 'lambda_fortress' || name === 'the_espionage_project' || name === 'error'){
 		//fetches html file
 		fetch("./" + [name] + ".html")
 		.then(response => response.text())
 		.then(text => pageHtml = text)
 		.then(enact => {
 			let stage = document.getElementById("infoCards");
-			console.log(pageHtml);
 			stage.innerHTML = pageHtml;
 			pageSpecificChanges(name);
+			window.scrollTo(0, 0);
+		});
+	//for fetching blog pages
+	} else if(name.search('-') > -1){
+		postName = name.substring(name.search("-") + 1, name.length);
+		game = name.substring(0, name.search("-"));
+		//normal page fetch but it puts it in a card
+		fetch("./blogs/" + game + "/" + postName + ".html")
+		.then(response => response.text())
+		.then(text => pageHtml = text)
+		.then(enact => {
+			let stage = document.getElementById("infoCards");
+			stage.innerHTML = '';
+			let newCard = document.createElement("div");
+			newCard.classList.add("infoCard");
+			newCard.innerHTML = pageHtml;
+			stage.appendChild(newCard);
+			pageSpecificChanges(game);
+			window.scrollTo(0, 0);
 		});
 	} else {
 		console.log('i ran');
@@ -97,19 +114,26 @@ function loadPageContents(name) {
 function pageSpecificChanges(page){
 	switch(page){
 		case "home":
+			//just to make home look more normal, i got rid of its search parameter
+			const url = new URL(window.location);
+			url.searchParams.delete('');
+			window.history.pushState({}, '', url);
 			resetIcons();
 			break;
-		case "deathmatch-classic-refragged":
+		case "error":
+			resetIcons();
+			break;
+		case "deathmatch_classic_refragged":
 			resetIcons();
 			icon = document.getElementById("dmcrIcon");
 			icon.style.backgroundImage = "url('./res/dmcrIcon.png')";
 			break;
-		case "lambda-fortress":
+		case "lambda_fortress":
 			resetIcons();
 			icon = document.getElementById("lfIcon");
 			icon.style.backgroundImage = "url('./res/lfIcon.png')";
 			break;
-		case "the-espionage-project":
+		case "the_espionage_project":
 			resetIcons();
 			icon = document.getElementById("tepIcon");
 			icon.style.backgroundImage = "url('./res/tepIcon.png')";
@@ -120,6 +144,13 @@ function pageSpecificChanges(page){
 	};
 };
 
+//i stole this code so idk. it changes the page when you use the browser to navigate back a page but doesnt work well.
+window.addEventListener('popstate', function(event) {
+  loadPageContents(url.substring(url.search("=") +1 , url.length));
+  clickSound();
+  transitionScreen();
+  console.log('Browser back button was pressed');
+});
 
 //resets icon styles
 function resetIcons(){
