@@ -42,7 +42,7 @@ window.onload = function(){
 
 
 //music
-let mainMusic = new Audio('./res/Crack_a_Lack-N+(Handheld).mp3');
+let mainMusic = new Audio('./res/CoaXioN.ogg');
 let click = new Audio('./res/click.mp3');
 
 function music() {
@@ -145,12 +145,12 @@ function pageSpecificChanges(page){
 };
 
 //i stole this code so idk. it changes the page when you use the browser to navigate back a page but doesnt work well.
-window.addEventListener('popstate', function(event) {
+/*window.addEventListener('popstate', function(event) {
   loadPageContents(url.substring(url.search("=") +1 , url.length));
   clickSound();
   transitionScreen();
   console.log('Browser back button was pressed');
-});
+});*/
 
 //resets icon styles
 function resetIcons(){
