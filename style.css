@@ -246,6 +246,36 @@ p{
 	height: auto;
 }
 
+.blogPostList{
+	width: -webkit-fill-available;
+	height: fit-content;
+	background-color: black;
+	padding: 1px;
+}
+
+.postPreview{
+	display: flex;
+	padding: 8px;
+	margin: 8px;
+	height: 90px;
+	width: -webkit-fill-available;
+	background-color: #141414;
+}
+
+.postPreviewText{
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	line-height: 0px;
+}
+
+.postPreviewText h2{
+	font-size: 14px;
+}
+
+.postPreviewText p{
+	font-size: 12px;
+}
 
 
 @font-face{

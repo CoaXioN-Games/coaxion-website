@@ -1,0 +1,39 @@
+{
+	"deathmatch_classic_refragged":
+	[
+		{
+			"title" : "Media Update 1: One track from the OST and an exclusive teaser!",
+			"description" : "Today, i present you one of the music tracks that would play in-game. Have fun listening! Composed by LAMAJKER.",
+			"date" : "09/16/21",
+			"contentUrl" : "./blogs/deathmatch_classic_refragged/development_update_1.html",
+			"thumbnailUrl": "./res/blogImages/dmcrThumb1.png"
+		},
+		{
+			"title" : "Deathmatch Classic: Refragged Development Media Update 2!",
+			"description" : "The first article was testing the waters, now let's show what we've really got to offer.",
+			"date" : "03/26/22"
+			"contentUrl" : "./blogs/deathmatch_classic_refragged/development_update_2.html",
+			"thumbnailUrl": "./res/blogImages/dmcrThumb2.png"
+		},
+		{
+			"title" : "Deathmatch Classic: Refragged Development Media Update 3!",
+			"description" : "New Maps, New Characters, New Features, New Media Update!",
+			"date" : "12/19/22"
+			"contentUrl" : "./blogs/deathmatch_classic_refragged/development_update_3.html",
+			"thumbnailUrl": "./res/blogImages/dmcrThumb3.png"
+		},
+		{
+			"title" : "Deathmatch Classic: Refragged Development Update 4! (3 Year Anniversary)",
+			"description" : "To celebrate 3 years of DMC:R development, we go in depth about its history, new content showcases, and where DMC:R is headed for the future.",
+			"date" : "05/02/23"
+			"contentUrl" : "./blogs/deathmatch_classic_refragged/development_update_4.html",
+			"thumbnailUrl": "./res/blogImages/dmcrThumb4.png"
+		}
+	],
+	"lambda_fortress":
+	[
+		{
+			"title" : "blank"
+		}
+	]
+}
