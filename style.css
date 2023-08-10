@@ -100,6 +100,7 @@ p{
 	display: flex;
 	justify-content: space-around;
 	width: 800px;
+	max-width: 100vw;
 }
 
 .playbackButton{
@@ -230,12 +231,14 @@ p{
 
 #footer{
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: grey;
 	margin-top: 30px;
 	margin: -8px;
-	height: 100px;
+	height: 145px;
+	width: -webkit-fill-available;
 	background-color: #141414;
 }
 
