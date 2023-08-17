@@ -69,6 +69,9 @@ url = window.location.href;
 uri = url.substring(url.search("=") +1 , url.length);
 
 function loadPageContents(name) {
+	//funny effects
+	transitionScreen();
+	clickSound();
 	//changes url
 	const url = new URL(window.location);
 	url.searchParams.set('', [name]);
