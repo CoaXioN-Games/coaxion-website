@@ -252,14 +252,16 @@ p{
 .blogPostList{
 	width: -webkit-fill-available;
 	height: fit-content;
+	display: flex;
+	flex-direction: column;
 	background-color: black;
-	padding: 1px;
+	padding: 8px 0px;
 }
 
 .postPreview{
 	display: flex;
 	padding: 8px;
-	margin: 8px;
+	margin: 4px 8px;
 	height: 90px;
 	width: -webkit-fill-available;
 	background-color: #141414;
@@ -274,6 +276,7 @@ p{
 
 .postPreviewText h2{
 	font-size: 14px;
+	cursor: pointer;
 }
 
 .postPreviewText p{

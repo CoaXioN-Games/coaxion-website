@@ -82,6 +82,7 @@ function loadPageContents(name) {
 			let stage = document.getElementById("infoCards");
 			stage.innerHTML = pageHtml;
 			pageSpecificChanges(name);
+			retreiveBlogList();
 			window.scrollTo(0, 0);
 		});
 	//for fetching blog pages
@@ -100,6 +101,7 @@ function loadPageContents(name) {
 			newCard.innerHTML = pageHtml;
 			stage.appendChild(newCard);
 			pageSpecificChanges(game);
+			retreiveBlogList();
 			window.scrollTo(0, 0);
 		});
 	} else {
@@ -151,6 +153,55 @@ function pageSpecificChanges(page){
   transitionScreen();
   console.log('Browser back button was pressed');
 });*/
+
+function retreiveBlogList(){
+	//for building blog lists
+	let fullBlogList = {};
+	if (document.getElementsByClassName("blogPostList")[0] != undefined){
+		fetch("./blogs/bloglist.json")
+		.then(response => response.json())
+		.then(json => fullBlogList = json)
+		.then(bruh => {console.log(fullBlogList); buildBlogList()});
+	};
+	//what to do if
+	function buildBlogList(){
+		let postListElement = document.getElementsByClassName("blogPostList")[0];
+		let blogType = postListElement.id;
+		let blogTypeName = '';
+		switch(blogType){
+			case "dmcrList":
+				blogTypeName = 'deathmatch_classic_refragged';
+				break;
+		};
+		let totalPostCount = fullBlogList[blogTypeName].length;
+		for (let i = 0; i <= totalPostCount -1; i++){
+			console.log(i);
+			let post = document.createElement("div");
+			post.classList.add("postPreview");
+			let thumbnail = document.createElement("img");
+			thumbnail.src = fullBlogList[blogTypeName][i].thumbnailUrl;
+			post.appendChild(thumbnail);
+			let previewTextDiv = document.createElement("div");
+			previewTextDiv.classList.add("postPreviewText");
+			let title = document.createElement("h2");
+			title.innerHTML = fullBlogList[blogTypeName][i].title;
+			let postUrl = fullBlogList[blogTypeName][i].contentUrl;
+			title.setAttribute('onclick', "loadPageContents('" + postUrl + "')");
+			previewTextDiv.appendChild(title);
+			let date = document.createElement("p");
+			date.innerHTML = fullBlogList[blogTypeName][i].date;
+			previewTextDiv.appendChild(date);
+			let description = document.createElement("p");
+			description.innerHTML = fullBlogList[blogTypeName][i].description;
+			previewTextDiv.appendChild(description);
+			post.appendChild(previewTextDiv);
+			post.style.order = -i;
+			postListElement.appendChild(post);
+		};
+	};
+};
+
+
 
 //resets icon styles
 function resetIcons(){
