@@ -3,7 +3,6 @@
 		<h1>TO DO AND NOTES AND STUFF</h1>
 		<p>should prob save mute preference</p>
 		<p>make nav bar scroll on mobile not janky</p>
-		<p>replace temp music</p>
 		<p>pause music when tab not focused</p>
 		<p>optimize buttons so they only use one image instead of two</p>
 		<p>figure out blog system</p>
@@ -14,12 +13,12 @@
 		<h1>BLOG PROGRESS</h1>
 		<p>Alright so I've started to work on how the blog will be managed. Still plenty of work to be done but heres some test stuff.</p>
 		<br>
-		<p>I have snatched the dmcr blog posts</p>
-		<p style="cursor:pointer; color: #c3c279;" onclick="loadPageContents('deathmatch_classic_refragged-development_update_1');">coaxion.games/?=deathmatch_classic_refragged-development_update_1</p>
-		<p style="cursor:pointer; color: #c3c279;" onclick="loadPageContents('deathmatch_classic_refragged-development_update_2');">coaxion.games/?=deathmatch_classic_refragged-development_update_2</p>
-		<p style="cursor:pointer; color: #c3c279;" onclick="loadPageContents('deathmatch_classic_refragged-development_update_3');">coaxion.games/?=deathmatch_classic_refragged-development_update_3</p>
-		<p style="cursor:pointer; color: #c3c279;" onclick="loadPageContents('deathmatch_classic_refragged-development_update_4');">coaxion.games/?=deathmatch_classic_refragged-development_update_4</p>
+		<p>I can summon a list of the dmcr blog posts with only the following html:</p>
+		<p>&lt;div class=&quot;blogPostList&quot; id=&quot;dmcrList&quot;&gt;
+	&lt;/div&gt;</p>
+		<p>Here is what that looks like:</p>
+		<div class="blogPostList" id="dmcrList"></div>
 		<br>
-		<p>I am aware they are missing titles and lil info blurbs. I think those might be stored separately. All the blog post info will be kept track of in a json file, so i think title and description will be kept seperate from blog content.</p>
+		<p>The info is retreived from a json file that contains the information for all of the blog posts. It only works for dmcr right now but thats also all I have at the moment.</p>
 	</div>
 </div>
