@@ -42,7 +42,7 @@ window.onload = function(){
 
 
 //music
-let mainMusic = new Audio('./res/CoaXioN.ogg');
+let mainMusic = new Audio('./res/CoaXioNLowSampleRate.ogg');
 let click = new Audio('./res/click.mp3');
 
 function music() {
