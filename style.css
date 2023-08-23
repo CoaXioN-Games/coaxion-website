@@ -3,12 +3,15 @@ body{
 }
 
 h1{
-	font-family: nasalization;
-	filter: drop-shadow(0px 0px 4px wheat);
+	font-family: stasmic;
+	letter-spacing: 0.06em;
+	/*filter: drop-shadow(0px 0px 4px wheat);*/
 }
 
 p{
-	font-family: coolvetica;
+	font-family: little_pixel;
+	font-size: 8px;
+	line-height: 5px;
 }
 
 #contentWrap{
@@ -27,7 +30,8 @@ p{
 	background-image: url(./res/enterScreen.gif);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 500px;
+	background-size: 1024px;
+	filter: saturate(0) brightness(2);
 	image-rendering: pixelated;
 	z-index: 4;
 	transition: all 0.5s ease;
@@ -90,6 +94,9 @@ p{
         height: 200px;
 		transition: all 1s ease;
     }
+	#screenCover {
+		background-size: 500px;
+	}
 }
 
 .topBarSpacer{
@@ -297,6 +304,21 @@ p{
 @font-face{
 	font-family: coolvetica;
 	src: url(./res/coolvetica-rg.otf);
+}
+
+@font-face{
+	font-family: agency;
+	src: url(./res/agencyfb.ttf);
+}
+
+@font-face{
+	font-family: stasmic;
+	src: url(./res/stasmic_.ttf);
+}
+
+@font-face{
+	font-family: little_pixel;
+	src: url(./res/little-pixel.ttf);
 }
 
 
