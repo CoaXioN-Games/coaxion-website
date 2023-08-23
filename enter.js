@@ -68,10 +68,15 @@ url = window.location.href;
 
 uri = url.substring(url.search("=") +1 , url.length);
 
+firstLoad = true;
+
 function loadPageContents(name) {
+	if (firstLoad === false){
 	//funny effects
 	transitionScreen();
 	clickSound();
+	};
+	firstLoad = false;
 	//changes url
 	const url = new URL(window.location);
 	url.searchParams.set('', [name]);
