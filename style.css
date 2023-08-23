@@ -232,6 +232,15 @@ li{
 	/*filter: drop-shadow(0px 0px 8px dodgerblue);*/
 }
 
+.mainBanner{
+	display: block;
+	width: 100%;
+	max-width: 1100px;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+}
 
 .infoCard{
 	font-family: verdana;
