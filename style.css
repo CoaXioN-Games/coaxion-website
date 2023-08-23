@@ -3,15 +3,24 @@ body{
 }
 
 h1{
-	font-family: stasmic;
-	letter-spacing: 0.06em;
+	font-family: abstract;
+	color: #cccccc;
+	font-size: 15px;
 	/*filter: drop-shadow(0px 0px 4px wheat);*/
 }
 
 p{
-	font-family: little_pixel;
+	font-family: little-pixel;
+	color: #888888;
 	font-size: 8px;
-	line-height: 5px;
+	line-height: 12px;
+}
+
+li{
+	font-family: little-pixel;
+	color: #888888;
+	font-size: 8px;
+	line-height: 12px;
 }
 
 #contentWrap{
@@ -282,12 +291,14 @@ p{
 }
 
 .postPreviewText h2{
-	font-size: 14px;
+	font-family: little-pixel;
+	font-size: 8px;
+	color: #cccccc;
 	cursor: pointer;
 }
 
 .postPreviewText p{
-	font-size: 12px;
+	font-size: 8px;
 }
 
 
@@ -317,8 +328,13 @@ p{
 }
 
 @font-face{
-	font-family: little_pixel;
+	font-family: little-pixel;
 	src: url(./res/little-pixel.ttf);
+}
+
+@font-face{
+	font-family: abstract;
+	src: url(./res/ABSTRACT.ttf);
 }
 
 
