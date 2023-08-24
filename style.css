@@ -288,21 +288,23 @@ li{
 
 .postPreview{
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	padding: 8px;
 	margin: 4px 8px;
-	height: 90px;
 	width: -webkit-fill-available;
 	background-color: #141414;
 }
 
 .postPreviewText{
-	padding: 8px;
+	padding: 3px 8px;
 	display: flex;
 	flex-direction: column;
-	line-height: 0px;
+	width: 630px;
 }
 
 .postPreviewText h2{
+	margin-top: 0px;
 	font-family: little-pixel;
 	font-size: 8px;
 	color: #cccccc;
@@ -311,6 +313,7 @@ li{
 
 .postPreviewText p{
 	font-size: 8px;
+	margin: 0px;
 }
 
 
