@@ -82,8 +82,9 @@ li{
 	margin: -8px;
 	margin-bottom: 40px;
 	padding: 10px;
-	background-color: black;
-	background: linear-gradient(0deg, rgba(28,28,28,28) 0%, rgba(36,36,36,1) 8%, rgba(46,46,46,1) 94%, rgba(38,38,38,1) 100%);
+	background-color: #141414;
+	border-bottom: solid;
+	border-color: #888888;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -142,8 +143,8 @@ li{
 	margin: 8px;
 	background-position: center;
 	background-size: contain;
-	filter: drop-shadow(2px 4px 6px black);
 	transition: all 0.5s ease;
+	transition-property: background-image, filter;
 	background-repeat: no-repeat;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -163,32 +164,45 @@ li{
 
 #dmcrIcon{
 	background-image: url(./res/dmcrIconGrey.png);
+	border: solid;
+	border-color: transparent;
 }
 
 #dmcrIcon:hover{
 	background-image: url(./res/dmcrIcon.png) !important;
 	cursor: pointer;
-	filter: drop-shadow(0px 0px 8px red);
+	border: solid;
+	border-color: #cccccc;
 }
 
 #lfIcon{
 	background-image: url(./res/lfIconGrey.png);
+	border: solid;
+	border-radius: 35px;
+	border-color: transparent;
 }
 
 #lfIcon:hover{
 	background-image: url(./res/lfIcon.png) !important;
 	cursor: pointer;
-	filter: drop-shadow(0px 0px 10px magenta);
+	border: solid;
+	border-radius: 35px;
+	border-color: #cccccc;
 }
 
 #tepIcon{
 	background-image: url(./res/tepIconGrey.png);
+	border: solid;
+	border-radius: 14px;
+	border-color: transparent;
 }
 
 #tepIcon:hover{
 	background-image: url(./res/tepIcon.png) !important;
 	cursor: pointer;
-	filter: drop-shadow(0px 0px 10px orangered);
+	border: solid;
+	border-radius: 14px;
+	border-color: #cccccc;
 }
 
 @media screen and (max-width: 1053px) {
@@ -252,7 +266,8 @@ li{
 	margin-right: auto;
 	margin-bottom: 40px;
 	padding: 20px;
-	background-color: #141414;
+	background-color: transparent;
+	background: linear-gradient(90deg, rgba(11,11,11,0) 0%, rgba(20,20,20,1) 50%, rgba(38,38,38,0) 100%);
 	color: white;
 	border-radius: 4px;
 }
@@ -262,7 +277,8 @@ li{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: grey;
+	border-top: solid;
+	color: #888888;
 	margin-top: 30px;
 	margin: -8px;
 	height: 145px;
