@@ -29,7 +29,12 @@ function closeEnterScreen(){
 	}, 500);
 	//plays music
 	mainMusic.loop = true;
-	mainMusic.play();
+	if (readCookie('muteMusic') === 'true') {
+		console.log('mute pref = muted');
+		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/notVibing.gif')";
+	} else {
+		mainMusic.play();
+	};
 };
 
 
@@ -49,9 +54,11 @@ function music() {
 	if (mainMusic.paused === false){
 		mainMusic.pause();
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/notVibing.gif')";
+		writeCookie('muteMusic', 'true');
 	} else {
 		mainMusic.play();
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/vibing.gif')";
+		deleteCookie('muteMusic');
 	}
 };
 
@@ -113,10 +120,10 @@ function loadPageContents(name) {
 			window.scrollTo(0, 0);
 		});
 	} else {
-		console.log('i ran');
 		const url = new URL(window.location);
 		url.searchParams.set('', 'home');
 		window.history.pushState({}, '', url);
+		firstLoad = true;
 		loadPageContents('home');
 	};
 };
@@ -221,9 +228,6 @@ function resetIcons(){
 	tepIcon.style.backgroundImage = "url('./res/tepIconGrey.png')";
 };
 
-
-
-
 //mobile scroll physics
 if (screen.width < 1053){
 	window.onscroll = function(e) {
@@ -236,5 +240,34 @@ if (screen.width < 1053){
 	  } else {
 		  document.getElementsByClassName('topBar')[0].style.top = '0px';
 	  };
+	};
+};
+
+
+//cookie functions borrowed from boxkid.net
+
+function writeCookie(name, property) {
+    document.cookie = name + '=' + property + ';expires=Thu, 01 Jan 2030 00:00:00 GMT;path=/';
+};
+
+function readCookie(name) {
+	if (document.cookie !== '') {
+	    let allCookies = document.cookie.split('; ');
+		let cookie = allCookies.find(row => row.startsWith(name + '='));
+		if (cookie) {
+			let cookieValue = cookie.split('=')[1];
+			return cookieValue;
+		} else {
+			return false;
+		};
+	};
+};
+function deleteCookie(name) {
+	document.cookie = name + '=' + ';expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'; 
+}
+function clearCookies() {
+	let allCookies = document.cookie.split('; ');
+	for (var i = 0; i < allCookies.length; i++) {
+		deleteCookie(allCookies[i]);
 	};
 };
