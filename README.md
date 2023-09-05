@@ -72,9 +72,7 @@ If adding articles for a new game, make a new folder for it and make sure an arr
 
 Some of this stuff might just never get fixed if it isn't a big enough problem, but this list is nice to have regardless.
 
-- Browser back button does not work
- - While navigating the website does push new urls into the search bar, the website doesn't keep it's own history, meaning that the back button doesn't work properly.
-- Transition effect broken if user enters page too fast
- - Clicking into the page too fast causes the transition effect to stay visible forever. Not super sure where to start with fixing this one, but the transition effect is also one of the more janky things so whatever.
+- Browser back button issues at beginning of history
+  - The back button works but you can go back infinitely at the start of the history
 - Page loading can be further optimized
- - The current system checks if the page should be loaded based on the name, instead of just attempting to load it no matter what. The blog articles do not do this and it should technically be faster. Maybe the page loading should work in the same way.
+  - The current system checks if the page should be loaded based on the name, instead of just attempting to load it no matter what. The blog articles do not do this and it should technically be faster. Maybe the page loading should work in the same way.
