@@ -1,4 +1,4 @@
-
+const pageStack = [];
 
 
 //old stuff but now just hides scrollbar
@@ -41,7 +41,7 @@ function closeEnterScreen(){
 //runs on page load
 window.onload = function(){
   openEnterScreen();
-  loadPageContents(uri);
+  loadPageContents(getUri());
 };
 
 
@@ -71,9 +71,11 @@ function clickSound(){
 //page switching
 pageHtml = "";
 
-url = window.location.href;
-
-uri = url.substring(url.search("=") +1 , url.length);
+function getUri(){
+	url = window.location.href;
+	uri = url.substring(url.search("=") +1 , url.length);
+	return uri;
+};
 
 firstLoad = true;
 
@@ -82,6 +84,7 @@ function loadPageContents(name) {
 	//funny effects
 	transitionScreen();
 	clickSound();
+	pageStack.push(getUri());
 	};
 	firstLoad = false;
 	//changes url
@@ -161,13 +164,16 @@ function pageSpecificChanges(page){
 	};
 };
 
-//i stole this code so idk. it changes the page when you use the browser to navigate back a page but doesnt work well.
-/*window.addEventListener('popstate', function(event) {
-  loadPageContents(url.substring(url.search("=") +1 , url.length));
-  clickSound();
-  transitionScreen();
-  console.log('Browser back button was pressed');
-});*/
+//makes browser back button work
+window.addEventListener('popstate', function(event) {
+    if (pageStack.length > 0) {
+		firstLoad = true;
+        const previousPage = pageStack.pop();
+        loadPageContents(previousPage);
+        clickSound();
+        transitionScreen();
+    }
+});
 
 function retreiveBlogList(){
 	//for building blog lists
