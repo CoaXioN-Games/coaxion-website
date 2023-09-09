@@ -61,11 +61,21 @@ function music() {
 		deleteCookie('muteMusic');
 	}
 };
-
-
+//click
 function clickSound(){
 	click.play();
 };
+//music stops when tab not focused
+const handleVisibilityChange = function() {
+    if (document.visibilityState === 'visible') {
+		if (readCookie('muteMusic') != 'true') {
+			mainMusic.play();
+		};
+    } else {
+		mainMusic.pause();
+    };
+};
+document.addEventListener("visibilitychange", handleVisibilityChange);
 
 
 //page switching
