@@ -170,7 +170,6 @@ li{
 }
 
 #dmcrIcon:hover{
-	background-image: url(./res/dmcrIcon.png);
 	filter: saturate(1)brightness(1) !important;
 	cursor: pointer;
 	border: solid;
@@ -186,7 +185,6 @@ li{
 }
 
 #lfIcon:hover{
-	background-image: url(./res/lfIcon.png);
 	filter: saturate(1)brightness(1) !important;
 	cursor: pointer;
 	border: solid;
@@ -202,7 +200,6 @@ li{
 }
 
 #tepIcon:hover{
-	background-image: url(./res/tepIcon.png);
 	filter: saturate(1)brightness(1) !important;
 	cursor: pointer;
 	border: solid;
@@ -230,7 +227,6 @@ li{
 }
 
 #twitterIcon:hover{
-	background-image: url(./res/twitterIcon.png);
 	cursor: pointer;
 	filter: saturate(1);
 	/*filter: drop-shadow(0px 0px 8px chartreuse);*/
@@ -242,7 +238,6 @@ li{
 }
 
 #youtubeIcon:hover{
-	background-image: url(./res/youtubeIcon.png);
 	filter: saturate(1);
 	cursor: pointer;
 	/*filter: drop-shadow(0px 0px 8px deeppink);*/
@@ -254,8 +249,18 @@ li{
 }
 
 #steamIcon:hover{
-	background-image: url(./res/steamIcon.png);
 	filter: saturate(1);
+	cursor: pointer;
+	/*filter: drop-shadow(0px 0px 8px dodgerblue);*/
+}
+
+#lambdagenIcon{
+	background-image: url(./res/LambdaGenIcon.png);
+	filter: saturate(0) contrast(0) brightness(1.1);
+}
+
+#lambdagenIcon:hover{
+	filter: saturate(1) contrast(1) brightness(1);
 	cursor: pointer;
 	/*filter: drop-shadow(0px 0px 8px dodgerblue);*/
 }
