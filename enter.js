@@ -49,6 +49,7 @@ window.onload = function(){
 //music
 let mainMusic = new Audio('./res/CoaXioNLowSampleRate.ogg');
 let click = new Audio('./res/click.mp3');
+let hover = new Audio('./res/hover.mp3');
 
 function music() {
 	if (mainMusic.paused === false){
@@ -64,6 +65,9 @@ function music() {
 //click
 function clickSound(){
 	click.play();
+};
+function hoverSound(){
+	hover.play();
 };
 //music stops when tab not focused
 const handleVisibilityChange = function() {
