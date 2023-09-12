@@ -172,13 +172,13 @@ li{
 	background-image: url(./res/dmcrIcon.png) !important;
 	cursor: pointer;
 	border: solid;
-	border-color: #cccccc;
+	border-image-source: url('./res/selector.svg');
+	border-image-slice: 5%
 }
 
 #lfIcon{
 	background-image: url(./res/lfIconGrey.png);
 	border: solid;
-	border-radius: 35px;
 	border-color: transparent;
 }
 
@@ -186,14 +186,13 @@ li{
 	background-image: url(./res/lfIcon.png) !important;
 	cursor: pointer;
 	border: solid;
-	border-radius: 35px;
-	border-color: #cccccc;
+	border-image-source: url('./res/selector.svg');
+	border-image-slice: 5%
 }
 
 #tepIcon{
 	background-image: url(./res/tepIconGrey.png);
 	border: solid;
-	border-radius: 14px;
 	border-color: transparent;
 }
 
@@ -201,8 +200,8 @@ li{
 	background-image: url(./res/tepIcon.png) !important;
 	cursor: pointer;
 	border: solid;
-	border-radius: 14px;
-	border-color: #cccccc;
+	border-image-source: url('./res/selector.svg');
+	border-image-slice: 5%
 }
 
 @media screen and (max-width: 1053px) {
