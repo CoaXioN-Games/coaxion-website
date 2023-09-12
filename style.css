@@ -163,27 +163,31 @@ li{
 /*game icons*/
 
 #dmcrIcon{
-	background-image: url(./res/dmcrIconGrey.png);
+	background-image: url(./res/dmcrIcon.png);
+	filter: saturate(0) brightness(1.6);
 	border: solid;
 	border-color: transparent;
 }
 
 #dmcrIcon:hover{
-	background-image: url(./res/dmcrIcon.png) !important;
+	background-image: url(./res/dmcrIcon.png);
+	filter: saturate(1)brightness(1) !important;
 	cursor: pointer;
 	border: solid;
 	border-image-source: url('./res/selector.svg');
-	border-image-slice: 5%
+	border-image-slice: 5%;
 }
 
 #lfIcon{
-	background-image: url(./res/lfIconGrey.png);
+	background-image: url(./res/lfIcon.png);
+	filter: saturate(0);
 	border: solid;
 	border-color: transparent;
 }
 
 #lfIcon:hover{
-	background-image: url(./res/lfIcon.png) !important;
+	background-image: url(./res/lfIcon.png);
+	filter: saturate(1)brightness(1) !important;
 	cursor: pointer;
 	border: solid;
 	border-image-source: url('./res/selector.svg');
@@ -191,13 +195,15 @@ li{
 }
 
 #tepIcon{
-	background-image: url(./res/tepIconGrey.png);
+	background-image: url(./res/tepIcon.png);
+	filter: saturate(0);
 	border: solid;
 	border-color: transparent;
 }
 
 #tepIcon:hover{
-	background-image: url(./res/tepIcon.png) !important;
+	background-image: url(./res/tepIcon.png);
+	filter: saturate(1)brightness(1) !important;
 	cursor: pointer;
 	border: solid;
 	border-image-source: url('./res/selector.svg');
@@ -219,31 +225,37 @@ li{
 /*social icons*/
 
 #twitterIcon{
-	background-image: url(./res/twitterIconGrey.png);
+	background-image: url(./res/twitterIcon.png);
+	filter: saturate(0);
 }
 
 #twitterIcon:hover{
 	background-image: url(./res/twitterIcon.png);
 	cursor: pointer;
+	filter: saturate(1);
 	/*filter: drop-shadow(0px 0px 8px chartreuse);*/
 }
 
 #youtubeIcon{
-	background-image: url(./res/youtubeIconGrey.png);
+	background-image: url(./res/youtubeIcon.png);
+	filter: saturate(0) brightness(1.6);
 }
 
 #youtubeIcon:hover{
 	background-image: url(./res/youtubeIcon.png);
+	filter: saturate(1);
 	cursor: pointer;
 	/*filter: drop-shadow(0px 0px 8px deeppink);*/
 }
 
 #steamIcon{
-	background-image: url(./res/steamIconGrey.png);
+	background-image: url(./res/steamIcon.png);
+	filter: saturate(0) brightness(1.8);
 }
 
 #steamIcon:hover{
 	background-image: url(./res/steamIcon.png);
+	filter: saturate(1);
 	cursor: pointer;
 	/*filter: drop-shadow(0px 0px 8px dodgerblue);*/
 }

@@ -156,17 +156,17 @@ function pageSpecificChanges(page){
 		case "deathmatch_classic_refragged":
 			resetIcons();
 			icon = document.getElementById("dmcrIcon");
-			icon.style.backgroundImage = "url('./res/dmcrIcon.png')";
+			icon.style.filter = "saturate(1) brightness(1)";
 			break;
 		case "lambda_fortress":
 			resetIcons();
 			icon = document.getElementById("lfIcon");
-			icon.style.backgroundImage = "url('./res/lfIcon.png')";
+			icon.style.filter = "saturate(1) brightness(1)";
 			break;
 		case "the_espionage_project":
 			resetIcons();
 			icon = document.getElementById("tepIcon");
-			icon.style.backgroundImage = "url('./res/tepIcon.png')";
+			icon.style.filter = "saturate(1) brightness(1)";
 			break;
 		default:
 			resetIcons();
@@ -239,9 +239,9 @@ function resetIcons(){
 	dmcrIcon = document.getElementById("dmcrIcon");
 	lfIcon = document.getElementById("lfIcon");
 	tepIcon = document.getElementById("tepIcon");
-	dmcrIcon.style.backgroundImage = "url('./res/dmcrIconGrey.png')";
-	lfIcon.style.backgroundImage = "url('./res/lfIconGrey.png')";
-	tepIcon.style.backgroundImage = "url('./res/tepIconGrey.png')";
+	dmcrIcon.style.filter = "saturate(0) brightness(1.6)";
+	lfIcon.style.filter = "saturate(0)";
+	tepIcon.style.filter = "saturate(0)";
 };
 
 //mobile scroll physics
