@@ -105,7 +105,7 @@ function loadPageContents(name) {
 	const url = new URL(window.location);
 	url.searchParams.set('', [name]);
 	window.history.pushState({}, '', url);
-	if (name === 'home' || name === 'deathmatch_classic_refragged' || name === 'lambda_fortress' || name === 'the_espionage_project' || name === 'error'){
+	if (name === 'home' || name === 'deathmatch_classic_refragged' || name === 'lambda_fortress' || name === 'the_espionage_project' || name === 'credits' || name === 'error'){
 		//fetches html file
 		fetch("./" + [name] + ".html")
 		.then(response => response.text())
