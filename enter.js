@@ -81,6 +81,12 @@ const handleVisibilityChange = function() {
 };
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
+//credits sounds
+function playSound(sound) {
+  var audio = new Audio(sound);
+  audio.play();
+};
+
 
 //page switching
 pageHtml = "";

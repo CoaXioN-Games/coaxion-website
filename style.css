@@ -364,24 +364,26 @@ li{
 
 /*credits page*/
 
+#creditsContainer{
+	max-width: 1000px;
+}
+
 .credits{
 	width: 100%;
 	max-height: 600px;
 	overflow: auto;
 	display: flex;
 	flex-wrap: wrap;
-	
 	justify-content: center;
 	background-color: black;
 	padding: 8px 8px;
 }
 
 .memberProfile{
-	width: 125px;
+	width: 165px;
 	min-height: 180px;
 	background-color: #141414;
 	text-align: center;
-	word-break: break-all;
 	padding: 2px 9px;
 	margin: 5px;
 }
