@@ -78,7 +78,7 @@ li{
 .topBar{
 	position: fixed;
 	z-index: 3;
-	width: -webkit-fill-available;
+	width: calc(100%);
 	margin: -8px;
 	margin-bottom: 40px;
 	padding: 10px;
