@@ -304,6 +304,16 @@ li{
 	cursor: pointer;
 }
 
+#awesomeWebsiteIcon{
+	background-image: url(./res/Sorlag.png);
+	filter: saturate(0) brightness(1.2);
+}
+
+#awesomeWebsiteIcon:hover{
+	filter: saturate(1) brightness(1);
+	cursor: pointer;
+}
+
 .pageLink{
 	border: solid;
 	border-color: transparent;
