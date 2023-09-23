@@ -159,6 +159,19 @@ li{
 	background-repeat: no-repeat;
 	-webkit-tap-highlight-color: transparent;
 }
+/*for credits*/
+.socialIconSmall{
+	height: 25px;
+	width: 25px;
+	margin: 5px;
+	display: inline-block;
+	text-decoration: none;
+	background-position: center;
+	background-size: contain;
+	transition: all 0.5s ease;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
+}
 
 /*game icons*/
 
@@ -229,7 +242,6 @@ li{
 #twitterIcon:hover{
 	cursor: pointer;
 	filter: saturate(1);
-	/*filter: drop-shadow(0px 0px 8px chartreuse);*/
 }
 
 #youtubeIcon{
@@ -240,7 +252,6 @@ li{
 #youtubeIcon:hover{
 	filter: saturate(1);
 	cursor: pointer;
-	/*filter: drop-shadow(0px 0px 8px deeppink);*/
 }
 
 #steamIcon{
@@ -251,7 +262,6 @@ li{
 #steamIcon:hover{
 	filter: saturate(1);
 	cursor: pointer;
-	/*filter: drop-shadow(0px 0px 8px dodgerblue);*/
 }
 
 #lambdagenIcon{
@@ -262,7 +272,36 @@ li{
 #lambdagenIcon:hover{
 	filter: saturate(1) contrast(1) brightness(1);
 	cursor: pointer;
-	/*filter: drop-shadow(0px 0px 8px dodgerblue);*/
+}
+
+#newgroundsIcon{
+	background-image: url(./res/newgroundsIcon.png);
+	filter: saturate(0) brightness(1);
+}
+
+#newgroundsIcon:hover{
+	filter: saturate(1) brightness(1);
+	cursor: pointer;
+}
+
+#githubIcon{
+	background-image: url(./res/githubIcon.png);
+	filter: saturate(0) brightness(0.55);
+}
+
+#githubIcon:hover{
+	filter: saturate(1) brightness(1);
+	cursor: pointer;
+}
+
+#personalWebsiteIcon{
+	background-image: url(./res/personalWebsiteIcon.png);
+	filter: saturate(0) brightness(0.55);
+}
+
+#personalWebsiteIcon:hover{
+	filter: saturate(1) brightness(1);
+	cursor: pointer;
 }
 
 .pageLink{
@@ -370,22 +409,24 @@ li{
 
 .credits{
 	width: 100%;
-	max-height: 600px;
-	overflow: auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	background-color: black;
-	padding: 8px 8px;
+	padding: 5px 0px;
 }
 
 .memberProfile{
-	width: 165px;
+	width: 170px;
 	min-height: 180px;
 	background-color: #141414;
 	text-align: center;
 	padding: 2px 9px;
 	margin: 5px;
+}
+
+.memberProfile a {
+	text-decoration: none;
 }
 
 .memberName{
