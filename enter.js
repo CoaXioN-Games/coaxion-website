@@ -3,7 +3,7 @@ const pageStack = [];
 
 //old stuff but now just hides scrollbar
 function openEnterScreen() {
-	document.getElementsByTagName("body")[0].style.overflow = "hidden";
+	//document.getElementsByTagName("body")[0].style.overflow = "hidden";
 };
 
 //transition effect
