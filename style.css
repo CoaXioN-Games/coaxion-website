@@ -163,7 +163,7 @@ li{
 .socialIconSmall{
 	height: 25px;
 	width: 25px;
-	margin: 5px;
+	margin: 6px;
 	display: inline-block;
 	text-decoration: none;
 	background-position: center;
@@ -477,8 +477,11 @@ li{
 }
 
 .memberProfile{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 170px;
-	min-height: 180px;
+	min-height: 235px;
 	background-color: #141414;
 	text-align: center;
 	padding: 2px 9px;
@@ -495,6 +498,10 @@ li{
 
 .memberProfile img {
 	width: 105px;
+}
+
+.linkSpacer{
+	flex-grow: 1;
 }
 
 @font-face{
