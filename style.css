@@ -294,6 +294,56 @@ li{
 	cursor: pointer;
 }
 
+#blueskyIcon{
+	background-image: url(./res/blueskyIcon.png);
+	filter: saturate(0) brightness(1.7);
+}
+
+#blueskyIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
+#tiktokIcon{
+	background-image: url(./res/tiktokIcon.png);
+	filter: saturate(0) contrast(0) brightness(1.1);
+}
+
+#tiktokIcon:hover{
+	filter: saturate(1) contrast(1) brightness(1);
+	cursor: pointer;
+}
+
+#twitchIcon{
+	background-image: url(./res/twitchIcon.png);
+	filter: saturate(0) brightness(1.4);
+}
+
+#twitchIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
+#artstationIcon{
+	background-image: url(./res/artstationIcon.png);
+	filter: saturate(0) brightness(1.1);
+}
+
+#artstationIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
+#mastodonIcon{
+	background-image: url(./res/mastodonIcon.png);
+	filter: saturate(0) brightness(1.3);
+}
+
+#mastodonIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
 #personalWebsiteIcon{
 	background-image: url(./res/personalWebsiteIcon.png);
 	filter: saturate(0) brightness(0.55);
