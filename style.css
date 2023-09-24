@@ -9,6 +9,13 @@ h1{
 	/*filter: drop-shadow(0px 0px 4px wheat);*/
 }
 
+h2{
+	font-family: little-pixel;
+	color: #cccccc;
+	font-size: 15px;
+	/*filter: drop-shadow(0px 0px 4px wheat);*/
+}
+
 p{
 	font-family: little-pixel;
 	color: #888888;

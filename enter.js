@@ -134,13 +134,37 @@ function loadPageContents(name) {
 		.then(enact => {
 			let stage = document.getElementById("infoCards");
 			stage.innerHTML = '';
-			let newCard = document.createElement("div");
-			newCard.classList.add("infoCard");
-			newCard.innerHTML = pageHtml;
-			stage.appendChild(newCard);
-			pageSpecificChanges(game);
-			retreiveBlogList();
-			window.scrollTo(0, 0);
+			//title
+			let fullBlogList = {};
+			fetch("./blogs/bloglist.json")
+			.then(response => response.json())
+			.then(json => fullBlogList = json)
+			.then(bruh => {placeBlogInfo()});
+			function placeBlogInfo(){
+				let totalPostCount = fullBlogList[game].length;
+				let postNumber = 0;
+				for (let i = 0; i <= totalPostCount -1; i++){
+					let title = fullBlogList[game][i].contentUrl;
+					if (title === name){
+						postNumber = i;
+						break;
+					};
+				};
+				let postTitle = fullBlogList[game][postNumber].title;
+				let postDate = fullBlogList[game][postNumber].date;
+				let newCard = document.createElement("div");
+				newCard.classList.add("infoCard");
+				newCard.innerHTML = "<h1>" + postTitle + "</h1>";
+				stage.appendChild(newCard);
+				//content
+				newCard = document.createElement("div");
+				newCard.classList.add("infoCard");
+				newCard.innerHTML = pageHtml;
+				stage.appendChild(newCard);
+				pageSpecificChanges(game);
+				retreiveBlogList();
+				window.scrollTo(0, 0);
+			};
 		});
 	} else {
 		const url = new URL(window.location);
@@ -169,6 +193,11 @@ function pageSpecificChanges(page){
 			icon.style.filter = "saturate(1) brightness(1)";
 			break;
 		case "lambda_fortress":
+			resetIcons();
+			icon = document.getElementById("lfIcon");
+			icon.style.filter = "saturate(1) brightness(1)";
+			break;
+		case "legacy_lambda_fortress_extended":
 			resetIcons();
 			icon = document.getElementById("lfIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
@@ -202,7 +231,7 @@ function retreiveBlogList(){
 		fetch("./blogs/bloglist.json")
 		.then(response => response.json())
 		.then(json => fullBlogList = json)
-		.then(bruh => {console.log(fullBlogList); buildBlogList()});
+		.then(bruh => {buildBlogList()});
 	};
 	//what to do if
 	function buildBlogList(){
@@ -213,10 +242,12 @@ function retreiveBlogList(){
 			case "dmcrList":
 				blogTypeName = 'deathmatch_classic_refragged';
 				break;
+			case "llfeList":
+				blogTypeName = 'legacy_lambda_fortress_extended';
+				break;
 		};
 		let totalPostCount = fullBlogList[blogTypeName].length;
 		for (let i = 0; i <= totalPostCount -1; i++){
-			console.log(i);
 			let post = document.createElement("div");
 			post.classList.add("postPreview");
 			let thumbnail = document.createElement("img");

@@ -39,5 +39,56 @@
 		{
 			"title" : "blank"
 		}
+	],
+	"legacy_lambda_fortress_extended":
+	[
+		{
+			"title" : "The Physics Gun",
+			"date" : "01/20/19",
+			"description" : "Today, we showcase the Physics gun!",
+			"contentUrl" : "legacy_lambda_fortress_extended-the_physics_gun",
+			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/the_physics_gun.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+		},
+		{
+			"title" : "The Main Menu",
+			"date" : "02/10/19",
+			"description" : "Today, we showcase our brand new Main Menu!",
+			"contentUrl" : "legacy_lambda_fortress_extended-the_main_menu",
+			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/the_main_menu.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+		},
+		{
+			"title" : "Lambda Fortress 2",
+			"date" : "03/31/19",
+			"description" : "Welcome to Counter Strike Source Fortress",
+			"contentUrl" : "legacy_lambda_fortress_extended-lambda_fortress_2",
+			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/lambda_fortress_2.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+		},
+		{
+			"title" : "The Wrangler",
+			"date" : "05/16/19",
+			"description" : "Today we are showcasing The Wrangler!",
+			"contentUrl" : "legacy_lambda_fortress_extended-the_wrangler",
+			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/the_wrangler.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+		},
+		{
+			"title" : "Update 5 Information #1",
+			"date" : "07/15/19",
+			"description" : "Today, we’ve wanted to make one of the first of a few blog posts regarding big changes in Update 5!",
+			"contentUrl" : "legacy_lambda_fortress_extended-update_5_information_1",
+			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/update_5_information_1.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+		},
+		{
+			"title" : "Update 5 Information #2",
+			"date" : "08/09/19",
+			"description" : "We’re back with another blog post, this time featuring information about pyrovision, NPC Support, and more!",
+			"contentUrl" : "legacy_lambda_fortress_extended-update_5_information_2",
+			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/update_5_information_2.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+		}
 	]
 }
