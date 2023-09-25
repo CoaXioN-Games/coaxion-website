@@ -244,7 +244,7 @@ window.addEventListener('popstate', function(event) {
 		firstLoad = true;
         const previousPage = pageStack.pop();
         loadPageContents(previousPage);
-        clickSound();
+        playSound('./res/click.mp3');
         transitionScreen();
     }
 });
