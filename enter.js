@@ -48,8 +48,6 @@ window.onload = function(){
 
 //music
 let mainMusic = new Audio('./res/CoaXioNLowSampleRate.ogg');
-let click = new Audio('./res/click.mp3');
-let hover = new Audio('./res/hover.mp3');
 
 function music() {
 	if (mainMusic.paused === false){
@@ -62,13 +60,7 @@ function music() {
 		deleteCookie('muteMusic');
 	}
 };
-//click
-function clickSound(){
-	click.play();
-};
-function hoverSound(){
-	hover.play();
-};
+
 //music stops when tab not focused
 const handleVisibilityChange = function() {
     if (document.visibilityState === 'visible') {
@@ -81,7 +73,7 @@ const handleVisibilityChange = function() {
 };
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
-//credits sounds
+//sounds
 function playSound(sound) {
   var audio = new Audio(sound);
   audio.play();
@@ -103,7 +95,7 @@ function loadPageContents(name) {
 	if (firstLoad === false){
 	//funny effects
 	transitionScreen();
-	clickSound();
+	playSound('./res/click.mp3');
 	pageStack.push(getUri());
 	};
 	firstLoad = false;
@@ -315,6 +307,7 @@ function initCarousel(){
 	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
 };
 function nextImage(){
+	playSound('./res/click2.mp3');
 	if (currentImage >= totalImages - 1){
 		return;
 	};
@@ -326,6 +319,7 @@ function nextImage(){
 	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
 };
 function previousImage(){
+	playSound('./res/click2.mp3');
 	if (currentImage === 0){
 		return;
 	};
