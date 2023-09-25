@@ -503,7 +503,8 @@ li{
 
 .blogPostList{
 	width: -webkit-fill-available;
-	height: fit-content;
+	max-height: 460px;
+	overflow: auto;
 	display: flex;
 	flex-direction: column;
 	background-color: black;
@@ -524,7 +525,7 @@ li{
 	padding: 3px 8px;
 	display: flex;
 	flex-direction: column;
-	width: 630px;
+	width: 610px;
 }
 
 .postPreviewText h2{
