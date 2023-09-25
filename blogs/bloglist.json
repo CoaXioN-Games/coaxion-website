@@ -48,7 +48,7 @@
 			"description" : "Today, we showcase the Physics gun!",
 			"contentUrl" : "legacy_lambda_fortress_extended-the_physics_gun",
 			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/the_physics_gun.html",
-			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+			"thumbnailUrl": "./res/blogImages/legacy_lambda_fortress_extended/thumb1.webp"
 		},
 		{
 			"title" : "The Main Menu",
@@ -56,7 +56,7 @@
 			"description" : "Today, we showcase our brand new Main Menu!",
 			"contentUrl" : "legacy_lambda_fortress_extended-the_main_menu",
 			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/the_main_menu.html",
-			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+			"thumbnailUrl": "./res/blogImages/legacy_lambda_fortress_extended/thumb2.webp"
 		},
 		{
 			"title" : "Lambda Fortress 2",
@@ -64,7 +64,7 @@
 			"description" : "Welcome to Counter Strike Source Fortress",
 			"contentUrl" : "legacy_lambda_fortress_extended-lambda_fortress_2",
 			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/lambda_fortress_2.html",
-			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+			"thumbnailUrl": "./res/blogImages/legacy_lambda_fortress_extended/thumb3.webp"
 		},
 		{
 			"title" : "The Wrangler",
@@ -88,7 +88,7 @@
 			"description" : "We’re back with another blog post, this time featuring information about pyrovision, NPC Support, and more!",
 			"contentUrl" : "legacy_lambda_fortress_extended-update_5_information_2",
 			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/update_5_information_2.html",
-			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+			"thumbnailUrl": "./res/blogImages/legacy_lambda_fortress_extended/thumb6.webp"
 		}
 	]
 }
