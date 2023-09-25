@@ -352,6 +352,16 @@ li{
 	filter: saturate(1);
 }
 
+#linktreeIcon{
+	background-image: url(./res/linktreeIcon.png);
+	filter: saturate(0) brightness(.8);
+}
+
+#linktreeIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
 #personalWebsiteIcon{
 	background-image: url(./res/personalWebsiteIcon.png);
 	filter: saturate(0) brightness(0.55);
