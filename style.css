@@ -362,6 +362,16 @@ li{
 	filter: saturate(1);
 }
 
+#moddbIcon{
+	background-image: url(./res/moddbIcon.png);
+	filter: saturate(0) brightness(0.55);
+}
+
+#moddbIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
 #personalWebsiteIcon{
 	background-image: url(./res/personalWebsiteIcon.png);
 	filter: saturate(0) brightness(0.55);
