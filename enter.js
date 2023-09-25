@@ -221,6 +221,7 @@ function pageSpecificChanges(page){
 			resetIcons();
 			icon = document.getElementById("dmcrIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
+			initCarousel();
 			break;
 		case "lambda_fortress":
 			resetIcons();
@@ -304,6 +305,37 @@ function retreiveBlogList(){
 };
 
 
+//image carousel
+let totalImages = 0;
+let currentImage = 0;
+function initCarousel(){
+	totalImages = document.getElementsByClassName("carouselImage").length;
+	currentImage = 0;
+	document.getElementsByClassName("carouselImage")[currentImage].id = "";
+	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
+};
+function nextImage(){
+	if (currentImage >= totalImages - 1){
+		return;
+	};
+	let currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
+	currentImageElement.id = "imageHidden";
+	currentImage++;
+	currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
+	currentImageElement.id = "";
+	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
+};
+function previousImage(){
+	if (currentImage === 0){
+		return;
+	};
+	let currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
+	currentImageElement.id = "imageHidden";
+	--currentImage;
+	currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
+	currentImageElement.id = "";
+	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
+};
 
 //resets icon styles
 function resetIcons(){

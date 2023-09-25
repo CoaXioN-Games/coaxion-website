@@ -423,6 +423,63 @@ li{
 	background-color: #141414;
 }
 
+/*game page stuff*/
+.imageCarousel{
+	font-family: verdana;
+	max-width: 800px;
+	max-height: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	background: linear-gradient(90deg, rgba(11,11,11,0) 0%, rgba(20,20,20,1) 50%, rgba(38,38,38,0) 100%);
+	background-color: #212121;
+	color: white;
+	border-radius: 4px;
+}
+
+.imageCarousel img{
+	width: calc(100%);
+}
+
+#imageHidden{
+	display: none;
+}
+
+.imageCarouselBottom{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.imageCarouselBottomSpacer{
+	display: inline-block;
+	width: 25px;
+}
+.imageNumber{
+	width: 25px;
+	display: inline-block;
+}
+
+.carouselControls{
+	display: inline-block;
+	user-select: none;
+	width: fit-content;
+}
+
+.carouselButton{
+	display: inline-block;
+	height: 40px;
+	width: 30px;
+	margin: 10px;
+	color: #888888;
+	text-align: center;
+	font-family: little-pixel;
+}
+
+.carouselButton:hover{
+	color: #cccccc;
+	cursor: pointer;
+}
 
 /*blog stuff*/
 #articlecontent img{
