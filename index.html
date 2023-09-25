@@ -67,25 +67,11 @@
 			<p style="margin: 15px; text-align: center;">CoaXioN is not affiliated with Valve Corporation or id Software.</p>
 			<div id='stats' style="height:60px;width:200px;">
 				<div style="position:absolute; width:200px; height:25px; text-align:center; background-color:#141414;">
-					<p>Total Website Views:</p>
+					<p>Total Page Views:</p>
 				</div>
 			</div>
 		</footer>
       </main>
 	  <script src="./enter.js"></script>
-	  <script>
-		var t = setInterval(function() {
-			if (window.goatcounter && window.goatcounter.visit_count) {
-				clearInterval(t)
-				window.goatcounter.visit_count({append: '#stats', no_branding: true, style: 
-				`div { border-color: transparent; background-color: #141414; color: #888888; border-radius: 0px;}
-				#gcvc-views {font-family: monospace;}
-				#gcvc-for {color: #888888;} `})
-			}
-		}, 100)
-		</script>
-		<script data-goatcounter="https://coaxion.goatcounter.com/count"
-		data-goatcounter-settings='{"path": "/"}'
-        async src="./count.js"></script>
     </body>
 </html>

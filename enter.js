@@ -111,7 +111,35 @@ function loadPageContents(name) {
 	const url = new URL(window.location);
 	url.searchParams.set('', [name]);
 	window.history.pushState({}, '', url);
+	//goatcounter inserted
+	function initGoatCounter() {
+		var t = setInterval(function() {
+		if (window.goatcounter && window.goatcounter.visit_count) {
+		  clearInterval(t);
+		  window.goatcounter.visit_count({
+			append: '#stats',
+			no_branding: true,
+			style: `
+			  div { border-color: transparent; background-color: #141414; color: #888888; border-radius: 0px; }
+			  #gcvc-views { font-family: monospace; }
+			  #gcvc-for { color: #888888; }
+			`
+		  });
+		}
+	  }, 100);
+	};
+	function initGoatCounterFr() {
+	  document.getElementById('stats').innerHTML ="<div style='position:absolute; width:200px; height:25px; text-align:center; background-color:#141414;'><p>Total Page Views:</p></div>";
+	  initGoatCounter();
+	  var script2 = document.createElement('script');
+	  script2.dataset.goatcounter = 'https://coaxion.goatcounter.com/count';
+	  script2.async = true;
+	  script2.src = './count.js';
+	  document.body.appendChild(script2);
+	};
+	//back to page load
 	if (name === 'home' || name === 'deathmatch_classic_refragged' || name === 'lambda_fortress' || name === 'the_espionage_project' || name === 'credits' || name === 'error'){
+		initGoatCounterFr();
 		//fetches html file
 		fetch("./" + [name] + ".html")
 		.then(response => response.text())
@@ -125,6 +153,7 @@ function loadPageContents(name) {
 		});
 	//for fetching blog pages
 	} else if(name.search('-') > -1){
+		initGoatCounterFr();
 		postName = name.substring(name.search("-") + 1, name.length);
 		game = name.substring(0, name.search("-"));
 		//normal page fetch but it puts it in a card
@@ -171,6 +200,7 @@ function loadPageContents(name) {
 		url.searchParams.set('', 'home');
 		window.history.pushState({}, '', url);
 		firstLoad = true;
+		document.getElementById('stats').innerHTML ="<div style='position:absolute; width:200px; height:25px; text-align:center; background-color:#141414;'><p>Page Views:</p></div>";
 		loadPageContents('home');
 	};
 };
