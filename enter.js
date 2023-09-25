@@ -219,6 +219,7 @@ function pageSpecificChanges(page){
 			resetIcons();
 			icon = document.getElementById("lfIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
+			initCarousel();
 			break;
 		case "legacy_lambda_fortress_extended":
 			resetIcons();
@@ -229,6 +230,7 @@ function pageSpecificChanges(page){
 			resetIcons();
 			icon = document.getElementById("tepIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
+			initCarousel();
 			break;
 		default:
 			resetIcons();
