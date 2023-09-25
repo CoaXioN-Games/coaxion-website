@@ -426,7 +426,11 @@ li{
 
 /*blog stuff*/
 #articlecontent img{
-	width: -webkit-fill-available;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 700px;
+	width: calc(100%);
 	height: auto;
 }
 
@@ -467,6 +471,13 @@ li{
 .postPreviewText p{
 	font-size: 8px;
 	margin: 0px;
+}
+
+@media screen and (max-width: 1053px) {
+	.ytEmbed{
+		width:300px;
+		height:169px;
+	}
 }
 
 /*credits page*/
