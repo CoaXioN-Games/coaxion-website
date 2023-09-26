@@ -74,9 +74,25 @@ const handleVisibilityChange = function() {
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
 //sounds
+let soundPlaying = false;
 function playSound(sound) {
-  var audio = new Audio(sound);
-  audio.play();
+    if (soundPlaying === false) {
+        var audio = new Audio(sound);
+        audio.onloadedmetadata = function () {
+            let soundLength = audio.duration;
+            soundPlaying = true;
+            audio.play();
+			if (readCookie('muteMusic') != 'true'){
+				mainMusic.volume = 0.1;
+			};
+            setTimeout(() => {
+                soundPlaying = false;
+				if (readCookie('muteMusic') != 'true'){
+					mainMusic.volume = 1;
+				};
+            }, soundLength * 1000);
+        };
+    };
 };
 
 
@@ -121,7 +137,7 @@ function loadPageContents(name) {
 	  }, 100);
 	};
 	function initGoatCounterFr() {
-	  document.getElementById('stats').innerHTML ="<div style='position:absolute; width:200px; height:25px; text-align:center; background-color:#141414;'><p>Total Page Views:</p></div>";
+	  document.getElementById('stats').innerHTML ="<div style='position:relative; z-index:1; width:200px; height:25px; text-align:center; background-color:#141414; margin-bottom:-25px;'><p>Total Page Views:</p></div><div style='position:absolute; width:200px; height:50px; text-align:center; padding-top:20px;'><p>disable adblock to view</p></div>";
 	  initGoatCounter();
 	  var script2 = document.createElement('script');
 	  script2.dataset.goatcounter = 'https://coaxion.goatcounter.com/count';

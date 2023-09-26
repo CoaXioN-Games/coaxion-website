@@ -31,6 +31,11 @@ li{
 	line-height: 15px;
 }
 
+iframe{
+	position: relative;
+	z-index: 0;
+}
+
 #contentWrap{
 	margin: -8px;
 	padding: 8px;
