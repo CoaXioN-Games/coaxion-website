@@ -309,7 +309,7 @@ iframe{
 
 #blueskyIcon{
 	background-image: url(./res/blueskyIcon.png);
-	filter: saturate(0) brightness(1.7);
+	filter: saturate(0) brightness(1.6);
 }
 
 #blueskyIcon:hover{
@@ -373,6 +373,26 @@ iframe{
 }
 
 #moddbIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
+#vkIcon{
+	background-image: url(./res/vkIcon.png);
+	filter: saturate(0) brightness(1.25);
+}
+
+#vkIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
+#telegramIcon{
+	background-image: url(./res/telegramIcon.png);
+	filter: saturate(0) brightness(0.9);
+}
+
+#telegramIcon:hover{
 	cursor: pointer;
 	filter: saturate(1);
 }
