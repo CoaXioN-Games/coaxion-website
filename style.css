@@ -584,6 +584,11 @@ li{
 	padding: 2px 9px;
 	margin: 5px;
 }
+@media screen and (max-width: 1053px) {
+	.memberProfile{
+		width:120px;
+	}
+}
 
 .memberProfile a {
 	text-decoration: none;
