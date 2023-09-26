@@ -487,6 +487,7 @@ li{
 }
 
 .carouselButton{
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	display: inline-block;
 	height: 40px;
 	width: 30px;
@@ -499,6 +500,11 @@ li{
 .carouselButton:hover{
 	color: #cccccc;
 	cursor: pointer;
+}
+@media screen and (max-width: 1053px) {
+	.carouselButton:hover{
+		color: #888888;
+	}
 }
 
 /*blog stuff*/
