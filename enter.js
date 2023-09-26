@@ -196,7 +196,7 @@ function loadPageContents(name) {
 				let postDate = fullBlogList[game][postNumber].date;
 				let newCard = document.createElement("div");
 				newCard.classList.add("infoCard");
-				newCard.innerHTML = "<h1>" + postTitle + "</h1>";
+				newCard.innerHTML = "<h1>" + postTitle + "</h1><p>" + postDate + "</p>";
 				stage.appendChild(newCard);
 				//content
 				newCard = document.createElement("div");
@@ -304,7 +304,7 @@ function retreiveBlogList(){
 			let title = document.createElement("h2");
 			title.innerHTML = fullBlogList[blogTypeName][i].title;
 			let postUrl = fullBlogList[blogTypeName][i].contentUrl;
-			title.setAttribute('onclick', "loadPageContents('" + postUrl + "')");
+			post.setAttribute('onclick', "loadPageContents('" + postUrl + "')");
 			previewTextDiv.appendChild(title);
 			let date = document.createElement("p");
 			date.innerHTML = fullBlogList[blogTypeName][i].date;

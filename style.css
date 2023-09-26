@@ -540,6 +540,7 @@ iframe{
 	margin: 4px 8px;
 	width: -webkit-fill-available;
 	background-color: #141414;
+	cursor: pointer;
 }
 
 .postPreviewText{
@@ -554,7 +555,6 @@ iframe{
 	font-family: little-pixel;
 	font-size: 8px;
 	color: #cccccc;
-	cursor: pointer;
 }
 
 .postPreviewText p{
