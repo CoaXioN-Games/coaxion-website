@@ -76,6 +76,11 @@ document.addEventListener("visibilitychange", handleVisibilityChange);
 //sounds
 let soundPlaying = false;
 function playSound(sound) {
+	if (sound === './res/click.mp3' || sound === './res/hover.mp3'){
+		var audio = new Audio(sound);
+		audio.play();
+		return;
+	};
     if (soundPlaying === false) {
         var audio = new Audio(sound);
         audio.onloadedmetadata = function () {
