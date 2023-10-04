@@ -397,6 +397,16 @@ iframe{
 	filter: saturate(1);
 }
 
+#imdbIcon{
+	background-image: url(./res/imdbIcon.png);
+	filter: saturate(0) brightness(0.8);
+}
+
+#imdbIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
 #personalWebsiteIcon{
 	background-image: url(./res/personalWebsiteIcon.png);
 	filter: saturate(0) brightness(0.55);
