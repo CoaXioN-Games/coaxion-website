@@ -407,6 +407,16 @@ iframe{
 	filter: saturate(1);
 }
 
+#gamebananaIcon{
+	background-image: url(./res/gamebananaIcon.png);
+	filter: saturate(0) brightness(0.7);
+}
+
+#gamebananaIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
 #personalWebsiteIcon{
 	background-image: url(./res/personalWebsiteIcon.png);
 	filter: saturate(0) brightness(0.55);
