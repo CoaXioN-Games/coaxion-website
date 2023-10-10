@@ -81,6 +81,23 @@ iframe{
 	display: none;
 }
 
+.constructionMessage{
+	position: fixed;
+	z-index: 1;
+	display: block;
+	left: 0px;
+	top: 128px;
+	max-width: 120px;
+	background-color: white;
+	padding: 8px;
+	transition: all 0.25s ease;
+}
+
+.constructionMessage:Hover{
+	filter: opacity(0);
+	user-select: none;
+}
+
 .logo{
 	height: 90px;
 	padding-top: 10px;
@@ -122,6 +139,9 @@ iframe{
 	}
 	h1 {
 		font-size: 10px;
+	}
+	constructionMessage{
+		top:200;
 	}
 }
 
