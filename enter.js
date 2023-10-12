@@ -373,8 +373,10 @@ if (screen.width < 1053){
 	  console.log(scrollingDown);
 	  if (scrollingDown === true){
 		  document.getElementsByClassName('topBar')[0].style.top = '-100px';
+		  document.getElementsByClassName('constructionMessage')[0].style.top = '20px';
 	  } else {
 		  document.getElementsByClassName('topBar')[0].style.top = '0px';
+		  document.getElementsByClassName('constructionMessage')[0].style.top = '200px';
 	  };
 	};
 };
