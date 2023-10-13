@@ -18,7 +18,13 @@ function transitionScreen(){
 		screenCover.style.display = "none";
 	}, 800);
 };
-
+//for if you killed him
+let guyStatus = 'alive';
+let guyHealth = 100;
+if (readCookie('guyHealth')){
+	guyStatus = 'dead';
+	guyHealth = parseInt(readCookie('guyHealth'), 10);
+};
 //fades out splash screen and hides it
 function closeEnterScreen(){
 	document.getElementsByTagName("body")[0].style.overflow = "auto";
@@ -29,11 +35,34 @@ function closeEnterScreen(){
 	}, 500);
 	//plays music
 	mainMusic.loop = true;
-	if (readCookie('muteMusic') === 'true') {
+	if (guyStatus === 'dead'){
+		document.getElementsByClassName('playbackButton')[0].setAttribute('onclick', "resuscitate()");
+		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/404.jpg')";
+		console.log('he is dead. click him to resucitate');
+	} else if (readCookie('muteMusic') === 'true') {
 		console.log('mute pref = muted');
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/notVibing.gif')";
 	} else {
 		mainMusic.play();
+	};
+};
+
+//bring him back
+function resuscitate(){
+	guyHealth++;
+	writeCookie('guyHealth', guyHealth);
+	console.log(guyHealth + "/100");
+	if (guyHealth > 99){
+		deleteCookie('guyHealth');
+		document.getElementsByClassName('playbackButton')[0].setAttribute('onclick', "music()");
+		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/vibing.gif')";
+		console.log("thanks man! i thought i was a goner for sure!")
+		if (readCookie('muteMusic') === 'true') {
+			console.log('mute pref = muted');
+			document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/notVibing.gif')";
+		} else {
+			mainMusic.play();
+		};
 	};
 };
 
@@ -64,6 +93,9 @@ function music() {
 //music stops when tab not focused
 const handleVisibilityChange = function() {
     if (document.visibilityState === 'visible') {
+		if (readCookie('guyHealth') < 100){
+			return;
+		}
 		if (readCookie('muteMusic') != 'true') {
 			mainMusic.play();
 		};

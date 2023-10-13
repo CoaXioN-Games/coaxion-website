@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+	  <title>CoaXioN</title>
+	  <meta name="keywords" content="coaxion">
+	  <meta name="description" content="Developing games you'll love.">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+	  <link rel="shortcut icon" href="./res/favicon.ico" type="image/x-icon">
+	  <link rel="preload" href="./res/dmcrIcon.png" as="image">
+	  <link rel="preload" href="./res/lfIcon.png" as="image">
+	  <link rel="preload" href="./res/tepIcon.png" as="image">
+	  <link rel="preload" href="./res/twitterIcon.png" as="image">
+	  <link rel="preload" href="./res/youtubeIcon.png" as="image">
+	  <link rel="preload" href="./res/steamIcon.png" as="image">
+    </head>
+    <body>
+      <main>
+	  <div class="deadGuy">
+	  </div>
+		<!--<div class="topBar">
+			<div class="logoDiv" onclick="loadPageContents('home')">
+				<img src="./res/coaxvectorblackbg.svg" alt="coaxion" class="logo">
+			</div>
+			<div class="topBarSpacer">
+			</div>
+			<div class="shortcuts">
+				<div class="modIcon" id="dmcrIcon" onclick="loadPageContents('deathmatch_classic_refragged')" onmouseover="playSound('./res/hover.mp3')">
+				</div>
+				<div class="modIcon" id="lfIcon" onclick="loadPageContents('lambda_fortress');" onmouseover="playSound('./res/hover.mp3')">
+				</div>
+				<div class="modIcon" id="tepIcon" onclick="loadPageContents('the_espionage_project');" onmouseover="playSound('./res/hover.mp3')">
+				</div>
+			</div>
+			<div class="topBarSpacer">
+			</div>
+			<div style="width:225px;">
+			</div>
+		</div>--->
+		<div id="contentWrap">
+			<div class="topFiller"></div>
+			<div id="transitionScreen"></div>
+			<div id="infoCards">
+				<div class="infoCard">
+					<h1>error 404</h1>
+					<p>The page you are looking for does not exist.</p>
+					<a href="https://coaxion.games/" rel="noopener"><p>Return to main page</p></a>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="shortcuts">
+				<a href="https://twitter.com/CoaXionGames" rel="noopener" target="_blank">
+					<div class="socialIcon" id="twitterIcon"></div>
+				</a>
+				<a href="https://www.youtube.com/@CoaXionGames" rel="noopener" target="_blank">
+					<div class="socialIcon" id="youtubeIcon"></div>
+				</a>
+				<a href="https://discord.gg/mHCFgn8yrv" rel="noopener" target="_blank">
+					<div class="socialIcon" id="discordIcon"></div>
+				</a>
+				<a href="https://steamcommunity.com/groups/Coaxion" rel="noopener" target="_blank">
+					<div class="socialIcon" id="steamIcon"></div>
+				</a>
+				<a href="https://www.moddb.com/company/coaxion" rel="noopener" target="_blank">
+					<div class="socialIcon" id="moddbIcon"></div>
+				</a>
+				<a href="https://community.lambdageneration.com/user/coaxion" rel="noopener" target="_blank">
+					<div class="socialIcon" id="lambdagenIcon"></div>
+				</a>
+			</div>
+			<p style="margin: 15px; text-align: center;">CoaXioN is not affiliated with Valve Corporation or id Software.</p>
+			<script>
+				function writeCookie(name, property) {
+					document.cookie = name + '=' + property + ';expires=Thu, 01 Jan 2030 00:00:00 GMT;path=/';
+				};
+				writeCookie('guyHealth', '0');
+			</script>
+		</footer>
+      </main>
+    </body>
+</html>

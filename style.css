@@ -171,6 +171,19 @@ iframe{
 	cursor: pointer;
 }
 
+.deadGuy{
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	background-image: url(./res/404.jpg);
+	background-size: contain;
+	background-position: center;
+	filter: invert(1);
+	mix-blend-mode: screen;
+}
+
 .modIcon{
 	height: 60px;
 	width: 60px;
