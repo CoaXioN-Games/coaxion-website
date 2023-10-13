@@ -69,11 +69,12 @@ iframe{
 	height: 101vh;
 	width: 100vw;
 	background-color: black;
-	background-image: url(./res/transition.gif);
-	filter: saturate(0);
+	background-image: url(./res/transitionScreen.gif);
+	image-rendering: pixelated;
 	transform: scaleY(-1);
 	background-position: center;
-	background-size: cover;
+	background-size: 100px;
+	background-repeat: repeat;
 	overflow: hidden;
 	transition: all 0.5s ease;
 	pointer-events: none;
