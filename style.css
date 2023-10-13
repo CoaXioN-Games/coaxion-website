@@ -73,7 +73,7 @@ iframe{
 	image-rendering: pixelated;
 	transform: scaleY(-1);
 	background-position: center;
-	background-size: 100px;
+	background-size: 80px;
 	background-repeat: repeat;
 	overflow: hidden;
 	transition: all 0.5s ease;
