@@ -255,14 +255,9 @@ iframe{
 }
 
 @media screen and (max-width: 1053px) {
-    #tepIcon:hover{
-		filter: drop-shadow(2px 4px 6px black);
-	}
-	#dmcrIcon:hover{
-		filter: drop-shadow(2px 4px 6px black);
-	}
-	#lfIcon:hover{
-		filter: drop-shadow(2px 4px 6px black);
+	.socialIcon{
+		width: 35px;
+		height: 35px;
 	}
 }
 
@@ -434,6 +429,16 @@ iframe{
 }
 
 #gamebananaIcon:hover{
+	cursor: pointer;
+	filter: saturate(1);
+}
+
+#discordIcon{
+	background-image: url(./res/discordIcon.png);
+	filter: saturate(0) brightness(1.3);
+}
+
+#discordIcon:hover{
 	cursor: pointer;
 	filter: saturate(1);
 }
