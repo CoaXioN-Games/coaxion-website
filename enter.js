@@ -363,24 +363,24 @@ function initCarousel(){
 };
 function nextImage(){
 	playSound('./res/click2.mp3');
-	if (currentImage >= totalImages - 1){
-		return;
-	};
 	let currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
 	currentImageElement.id = "imageHidden";
 	currentImage++;
+	//loopback image using modulo
+	currentImage = currentImage % totalImages;
 	currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
 	currentImageElement.id = "";
 	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
 };
 function previousImage(){
 	playSound('./res/click2.mp3');
-	if (currentImage === 0){
-		return;
-	};
 	let currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
 	currentImageElement.id = "imageHidden";
 	--currentImage;
+	//loopback image with if statement
+	if (currentImage < 0){
+		currentImage = totalImages - 1;
+	};
 	currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
 	currentImageElement.id = "";
 	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
