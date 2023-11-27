@@ -38,7 +38,7 @@ window.onload = function(){
 let name = '';
 let url = window.location.href;
 function start(){
-	name = url.substring(url.search('=')+1, url.length);
+	name = url.substring(url.search('-')+1, url.length);
 	retrievePost(name);
 	console.log(name);
 };
