@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+	  <title>CoaXioN</title>
+	  <meta name="keywords" content="coaxion">
+	  <meta name="description" content="Developing games you'll love.">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+	  <link rel="shortcut icon" href="./res/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+      <main>
+		<div class="topBar">
+			<h1 style="margin: 25px auto">Lambda Fortress Blog</h1>
+		</div>
+		<div id="contentWrap">
+			<div class="topFiller"></div>
+			<div id="infoCards">
+				<div class="infoCard">
+					<div class="blogPostList" id="lfList"></div>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<p style="margin: 15px; text-align: center;">CoaXioN is not affiliated with Valve Corporation or id Software.</p>
+		</footer>
+      </main>
+	  <script>
+//hello. htis was made from scraps of enter.js. im sorry. if you are looking at this and it doesn't makes sense, it's because its a small peice of the full orijal js. look at enter.js if you want to understand why this is like this and make changes accordingly
+//runs on page load
+window.onload = function(){
+	//the style has this set to hidden by default lol
+	document.getElementsByTagName("body")[0].style.overflow = "auto"
+	retreiveBlogList();
+};
+function retreiveBlogList(){
+	//for building blog lists
+	let fullBlogList = {};
+	//doesn't have to be an if but it's just carried over from before
+	if (document.getElementsByClassName("blogPostList")[0] != undefined){
+		fetch("./blogs/bloglist.json")
+		.then(response => response.json())
+		.then(json => fullBlogList = json)
+		.then(bruh => {buildBlogList()});
+	};
+	function buildBlogList(){
+		let postListElement = document.getElementsByClassName("blogPostList")[0];
+		let blogTypeName = 'lambda_fortress';
+		let totalPostCount = fullBlogList[blogTypeName].length;
+		for (let i = 0; i <= totalPostCount -1; i++){
+			let post = document.createElement("div");
+			post.classList.add("postPreview");
+			let thumbnail = document.createElement("img");
+			thumbnail.src = fullBlogList[blogTypeName][i].thumbnailUrl;
+			post.appendChild(thumbnail);
+			let previewTextDiv = document.createElement("div");
+			previewTextDiv.classList.add("postPreviewText");
+			let title = document.createElement("h2");
+			title.innerHTML = fullBlogList[blogTypeName][i].title;
+			//ungodly stuff idk
+			let postUrl = fullBlogList[blogTypeName][i].contentUrl;
+			let postName = postUrl.substring(postUrl.search('-')+1, postUrl.length);
+			post.setAttribute('onclick', "loadPageContents('" + postName + "')");
+			previewTextDiv.appendChild(title);
+			let date = document.createElement("p");
+			date.innerHTML = fullBlogList[blogTypeName][i].date;
+			previewTextDiv.appendChild(date);
+			let description = document.createElement("p");
+			description.innerHTML = fullBlogList[blogTypeName][i].description;
+			previewTextDiv.appendChild(description);
+			post.appendChild(previewTextDiv);
+			post.style.order = -i;
+			postListElement.appendChild(post);
+		};
+	};
+};
+function loadPageContents(name){
+	location.href = 'http://localhost:8000/lfview/blog.html' + '?=' + name;
+};
+	  </script>
+    </body>
+</html>

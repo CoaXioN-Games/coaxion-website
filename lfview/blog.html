@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+	  <title>CoaXioN</title>
+	  <meta name="keywords" content="coaxion">
+	  <meta name="description" content="Developing games you'll love.">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../style.css">
+	  <link rel="shortcut icon" href="../res/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+      <main>
+		<div class="topBar">
+			<h1 style="margin: 25px auto">Lambda Fortress Blog</h1>
+		</div>
+		<div id="contentWrap">
+			<div class="topFiller"></div>
+			<div id="infoCards">
+				<div class="infoCard">
+					<h1>BLOG</h1>
+					<p>Coming Soon!</p>
+					<p>test</p>
+					<div class="blogPostList" id="lfList"></div>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<p style="margin: 15px; text-align: center;">CoaXioN is not affiliated with Valve Corporation or id Software.</p>
+		</footer>
+      </main>
+	  <script>
+//runs on page load
+window.onload = function(){
+	document.getElementsByTagName("body")[0].style.overflow = "auto"
+	start();
+};
+let name = '';
+let url = window.location.href;
+function start(){
+	name = url.substring(url.search('=')+1, url.length);
+	retrievePost(name);
+	console.log(name);
+};
+function retrievePost(name){
+		fetch("../blogs/lambda_fortress/" + name + ".html")
+		.then(response => response.text())
+		.then(text => pageHtml = text)
+		.then(enact => {
+			let stage = document.getElementById("infoCards");
+			stage.innerHTML = '';
+			//title
+			let fullBlogList = {};
+			fetch("../blogs/bloglist.json")
+			.then(response => response.json())
+			.then(json => fullBlogList = json)
+			.then(bruh => {placeBlogInfo()});
+			function placeBlogInfo(){
+				let totalPostCount = fullBlogList.lambda_fortress.length;
+				let postNumber = 0;
+				for (let i = 0; i <= totalPostCount -1; i++){
+					//weird substring thing is happening because this was orginally meant to detect which game it was. now we know it is only lf so we chop the contentUrl. will prob change back to how it was honeslty
+					let title = fullBlogList.lambda_fortress[i].contentUrl.substring(16, fullBlogList.lambda_fortress[i].contentUrl.length);
+					if (title === name){
+						postNumber = i;
+						break;
+					};
+				};
+				let postTitle = fullBlogList.lambda_fortress[postNumber].title;
+				let postDate = fullBlogList.lambda_fortress[postNumber].date;
+				let newCard = document.createElement("div");
+				newCard.classList.add("infoCard");
+				newCard.innerHTML = "<h1>" + postTitle + "</h1><p>" + postDate + "</p>";
+				stage.appendChild(newCard);
+				//content
+				newCard = document.createElement("div");
+				newCard.classList.add("infoCard");
+				newCard.innerHTML = pageHtml;
+				stage.appendChild(newCard);
+			};
+		});
+};
+	  </script>
+    </body>
+</html>

@@ -323,6 +323,9 @@ function retreiveBlogList(){
 			case "llfeList":
 				blogTypeName = 'legacy_lambda_fortress_extended';
 				break;
+			case "lfList":
+				blogTypeName = 'lambda_fortress';
+				break;
 		};
 		let totalPostCount = fullBlogList[blogTypeName].length;
 		for (let i = 0; i <= totalPostCount -1; i++){

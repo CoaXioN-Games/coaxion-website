@@ -37,7 +37,20 @@
 	"lambda_fortress":
 	[
 		{
-			"title" : "blank"
+			"title" : "LF Blog Game",
+			"description" : "testing bru",
+			"date" : "00/00/00",
+			"contentUrl": "lambda_fortress-lf_blog_game",
+			"trueUrl" : "./blogs/lambda_fortress/lf_blog_game.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
+		},
+		{
+			"title" : "LF Second Sample Post",
+			"description" : "testing 2",
+			"date" : "11/27/23",
+			"contentUrl": "lambda_fortress-lf_second_sample",
+			"trueUrl" : "./blogs/lambda_fortress/lf_second_sample.html",
+			"thumbnailUrl": "./res/blogImages/defaultThumb.jpg"
 		}
 	],
 	"legacy_lambda_fortress_extended":
