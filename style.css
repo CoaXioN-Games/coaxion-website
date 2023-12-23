@@ -338,7 +338,7 @@ iframe{
 
 #blueskyIcon{
 	background-image: url(./res/blueskyIcon.png);
-	filter: saturate(0) brightness(1.6);
+	filter: saturate(0) brightness(1.1);
 }
 
 #blueskyIcon:hover{
