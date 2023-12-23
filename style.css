@@ -19,14 +19,14 @@ h2{
 
 p{
 	font-family: little-pixel;
-	color: #888888;
+	color: #a9a9a9;
 	font-size: 9px;
 	line-height: 15px;
 }
 
 li{
 	font-family: little-pixel;
-	color: #888888;
+	color: #a9a9a9;
 	font-size: 9px;
 	line-height: 15px;
 }
@@ -115,7 +115,7 @@ iframe{
 	padding: 10px;
 	background-color: #141414;
 	border-bottom: solid;
-	border-color: #888888;
+	border-color: #a9a9a9;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -519,7 +519,7 @@ iframe{
 	align-items: center;
 	justify-content: center;
 	border-top: solid;
-	color: #888888;
+	color: #a9a9a9;
 	margin-top: 30px;
 	margin: -8px;
 	height: 200px;
@@ -576,7 +576,7 @@ iframe{
 	height: 40px;
 	width: 30px;
 	margin: 10px;
-	color: #888888;
+	color: #a9a9a9;
 	text-align: center;
 	font-family: little-pixel;
 }
@@ -587,7 +587,7 @@ iframe{
 }
 @media screen and (max-width: 1053px) {
 	.carouselButton:hover{
-		color: #888888;
+		color: #a9a9a9;
 	}
 }
 
