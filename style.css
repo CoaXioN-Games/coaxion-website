@@ -24,6 +24,14 @@ p{
 	line-height: 15px;
 }
 
+a:link{
+	color: #8bc3c1;
+}
+
+a:visited{
+	color: #8b8fc3;
+}
+
 li{
 	font-family: little-pixel;
 	color: #a9a9a9;
@@ -594,8 +602,10 @@ iframe{
 /*blog stuff*/
 #articlecontent img{
 	display: block;
+	margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 15px;
 	max-width: 700px;
 	width: calc(100%);
 	height: auto;
@@ -646,6 +656,50 @@ iframe{
 		width:300px;
 		height:169px;
 	}
+}
+
+.fullImage{
+	width: 100% !important;
+}
+
+.halfImage{
+	width: 50% !important;
+}
+
+.thirdImage{
+	width: 33% !important;
+}
+
+.imageRow{
+	display: flex;
+	height: max-content;
+	width: 100%;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.rowItem{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.imageInRow{
+	flex: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.imageInRow img{
+	min-width:0;
+	display: block;
+	margin-top: 0px!important;
+	margin-left: 0px!important;
+	margin-right: 0px!important;
+	margin-bottom: 0px !important;
+	width: 100%!important;
+	height: 100%!important;
+	object-fit: cover;
 }
 
 /*credits page*/
