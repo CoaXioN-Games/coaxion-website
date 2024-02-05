@@ -52,7 +52,7 @@ iframe{
 }
 
 #screenCover{
-	position: fixed;
+	position: absolute;
 	margin: -8px;
 	height: 101vh;
 	width: 100vw;

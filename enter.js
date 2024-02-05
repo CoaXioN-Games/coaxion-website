@@ -29,6 +29,7 @@ if (readCookie('guyHealth')){
 function closeEnterScreen(){
 	document.getElementsByTagName("body")[0].style.overflow = "auto";
 	screenCover = document.getElementById("screenCover")
+	screenCover.style.transform = "translate(0px, -1000px)";
 	screenCover.style.opacity = 0;
 	setTimeout(()=>{
 		screenCover.style.display = "none";
