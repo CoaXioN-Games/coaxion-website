@@ -660,15 +660,15 @@ iframe{
 }
 
 .fullImage{
-    max-height: 400px;
+    max-height: 400px !important;
 }
 
 .halfImage{
-    max-height: 200px;
+    max-height: 200px !important;
 }
 
 .thirdImage{
-    max-height: 134px;
+    max-height: 134px !important;
 }
 
 .imageRow{
