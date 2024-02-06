@@ -600,15 +600,16 @@ iframe{
 }
 
 /*blog stuff*/
-#articlecontent img{
-	display: block;
-	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 15px;
-	max-width: 700px;
-	width: calc(100%);
-	height: auto;
+#articlecontent img {
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    max-height: 400px;
+    max-width: none;
+    width: auto;
+    height: auto;
 }
 
 .blogPostList{
@@ -659,15 +660,15 @@ iframe{
 }
 
 .fullImage{
-	width: 100% !important;
+    max-height: 400px;
 }
 
 .halfImage{
-	width: 50% !important;
+    max-height: 200px;
 }
 
 .thirdImage{
-	width: 33% !important;
+    max-height: 134px;
 }
 
 .imageRow{
@@ -684,10 +685,9 @@ iframe{
 	flex-direction: column;
 }
 
-.imageInRow{
-	flex: 1;
-	position: relative;
-	overflow: hidden;
+.imageInRow {
+    position: relative;
+    overflow: hidden;
 }
 
 .imageInRow img{
