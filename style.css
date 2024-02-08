@@ -671,6 +671,22 @@ iframe{
     max-height: 134px !important;
 }
 
+/* phone fix */
+@media only screen and (max-width: 600px) {
+  #articlecontent img {
+      max-height: 190px;
+  }
+  .fullImage {
+      max-height: 190px !important;
+  }
+  .halfImage {
+      max-height: 95px !important;
+  }
+  .thirdImage {
+      max-height: 63px !important;
+  }
+}
+
 .imageRow{
 	display: flex;
 	height: max-content;
