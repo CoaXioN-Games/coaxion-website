@@ -252,9 +252,11 @@ function loadPageContents(name) {
 };
 
 function pageSpecificChanges(page){
+	var topBarColor = document.getElementsByClassName("topBar")[0];
 	switch(page){
 		case "home":
 			//just to make home look more normal, i got rid of its search parameter
+            topBarColor.style.borderColor = "white";
 			const url = new URL(window.location);
 			url.searchParams.delete('');
 			window.history.pushState({}, '', url);
@@ -264,12 +266,14 @@ function pageSpecificChanges(page){
 			resetIcons();
 			break;
 		case "deathmatch_classic_refragged":
+            topBarColor.style.borderColor = "#ec382c";
 			resetIcons();
 			icon = document.getElementById("dmcrIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
 			initCarousel();
 			break;
 		case "lambda_fortress":
+            topBarColor.style.borderColor = "rgb(248, 176, 50)";
 			resetIcons();
 			icon = document.getElementById("lfIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
@@ -281,6 +285,7 @@ function pageSpecificChanges(page){
 			icon.style.filter = "saturate(1) brightness(1)";
 			break;
 		case "the_espionage_project":
+            topBarColor.style.borderColor = "rgb(0, 56, 139)";
 			resetIcons();
 			icon = document.getElementById("tepIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
