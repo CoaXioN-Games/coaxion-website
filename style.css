@@ -49,6 +49,7 @@ iframe{
 	padding: 8px;
 	background-image: url(./res/bg.png);
 	background-attachment: fixed;
+	animation: slide 2000s infinite;
 }
 
 #screenCover{
@@ -743,7 +744,20 @@ iframe{
 	text-align: center;
 	padding: 2px 9px;
 	margin: 5px;
+	border: solid;
+    	border-color: transparent;
 }
+
+.memberProfile:hover {
+    border: solid;
+    border-image-source: url('./res/selector.svg');
+    border-image-slice: 5%;
+}
+
+.memberProfile img:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1053px) {
 	.memberProfile{
 		width:120px;
@@ -832,4 +846,11 @@ iframe{
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555555;
+}
+
+/* animations */
+
+@keyframes slide {
+    from {background-position: 0%}
+    to {background-position: 1000%}
 }
