@@ -285,7 +285,7 @@ function pageSpecificChanges(page){
 			icon.style.filter = "saturate(1) brightness(1)";
 			break;
 		case "the_espionage_project":
-            topBarColor.style.borderColor = "rgb(0, 56, 139)";
+            topBarColor.style.borderColor = "#3a6be9";
 			resetIcons();
 			icon = document.getElementById("tepIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
