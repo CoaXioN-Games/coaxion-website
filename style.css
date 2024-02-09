@@ -686,6 +686,12 @@ iframe{
   .thirdImage {
       max-height: 63px !important;
   }
+.shortcuts {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    max-width: 40vw;
+}
 }
 
 .imageRow{
