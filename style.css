@@ -47,7 +47,7 @@ iframe{
 #contentWrap{
 	margin: -8px;
 	padding: 8px;
-	background-image: url(./res/bg.png);
+	background-image: url(./res/bg.webp);
 	background-attachment: fixed;
 	animation: slide 2000s infinite;
 }
@@ -232,7 +232,7 @@ iframe{
 /*game icons*/
 
 #dmcrIcon{
-	background-image: url(./res/dmcrIcon.png);
+	background-image: url(./res/dmcrIcon.webp);
 	filter: saturate(0) brightness(1.6);
 	border: solid;
 	border-color: transparent;
@@ -247,7 +247,7 @@ iframe{
 }
 
 #lfIcon{
-	background-image: url(./res/lfIcon.png);
+	background-image: url(./res/lfIcon.webp);
 	filter: saturate(0);
 	border: solid;
 	border-color: transparent;
@@ -262,7 +262,7 @@ iframe{
 }
 
 #tepIcon{
-	background-image: url(./res/tepIcon.png);
+	background-image: url(./res/tepIcon.webp);
 	filter: saturate(0);
 	border: solid;
 	border-color: transparent;
@@ -286,7 +286,7 @@ iframe{
 /*social icons*/
 
 #twitterIcon{
-	background-image: url(./res/twitterIcon.png);
+	background-image: url(./res/twitterIcon.webp);
 	filter: saturate(0);
 }
 
@@ -296,7 +296,7 @@ iframe{
 }
 
 #youtubeIcon{
-	background-image: url(./res/youtubeIcon.png);
+	background-image: url(./res/youtubeIcon.webp);
 	filter: saturate(0) brightness(1.6);
 }
 
@@ -306,7 +306,7 @@ iframe{
 }
 
 #steamIcon{
-	background-image: url(./res/steamIcon.png);
+	background-image: url(./res/steamIcon.webp);
 	filter: saturate(0) brightness(1.8);
 }
 
@@ -316,7 +316,7 @@ iframe{
 }
 
 #lambdagenIcon{
-	background-image: url(./res/LambdaGenIcon.png);
+	background-image: url(./res/LambdaGenIcon.webp);
 	filter: saturate(0) contrast(0) brightness(1.1);
 }
 
@@ -326,7 +326,7 @@ iframe{
 }
 
 #newgroundsIcon{
-	background-image: url(./res/newgroundsIcon.png);
+	background-image: url(./res/newgroundsIcon.webp);
 	filter: saturate(0) brightness(1);
 }
 
@@ -336,7 +336,7 @@ iframe{
 }
 
 #githubIcon{
-	background-image: url(./res/githubIcon.png);
+	background-image: url(./res/githubIcon.webp);
 	filter: saturate(0) brightness(0.55);
 }
 
@@ -346,7 +346,7 @@ iframe{
 }
 
 #blueskyIcon{
-	background-image: url(./res/blueskyIcon.png);
+	background-image: url(./res/blueskyIcon.webp);
 	filter: saturate(0) brightness(1.1);
 }
 
@@ -356,7 +356,7 @@ iframe{
 }
 
 #tiktokIcon{
-	background-image: url(./res/tiktokIcon.png);
+	background-image: url(./res/tiktokIcon.webp);
 	filter: saturate(0) contrast(0) brightness(1.1);
 }
 
@@ -366,7 +366,7 @@ iframe{
 }
 
 #twitchIcon{
-	background-image: url(./res/twitchIcon.png);
+	background-image: url(./res/twitchIcon.webp);
 	filter: saturate(0) brightness(1.4);
 }
 
@@ -376,7 +376,7 @@ iframe{
 }
 
 #artstationIcon{
-	background-image: url(./res/artstationIcon.png);
+	background-image: url(./res/artstationIcon.webp);
 	filter: saturate(0) brightness(1.1);
 }
 
@@ -386,7 +386,7 @@ iframe{
 }
 
 #mastodonIcon{
-	background-image: url(./res/mastodonIcon.png);
+	background-image: url(./res/mastodonIcon.webp);
 	filter: saturate(0) brightness(1.3);
 }
 
@@ -396,7 +396,7 @@ iframe{
 }
 
 #linktreeIcon{
-	background-image: url(./res/linktreeIcon.png);
+	background-image: url(./res/linktreeIcon.webp);
 	filter: saturate(0) brightness(.8);
 }
 
@@ -406,7 +406,7 @@ iframe{
 }
 
 #moddbIcon{
-	background-image: url(./res/moddbIcon.png);
+	background-image: url(./res/moddbIcon.webp);
 	filter: saturate(0) brightness(0.55);
 }
 
@@ -416,7 +416,7 @@ iframe{
 }
 
 #vkIcon{
-	background-image: url(./res/vkIcon.png);
+	background-image: url(./res/vkIcon.webp);
 	filter: saturate(0) brightness(1.25);
 }
 
@@ -426,7 +426,7 @@ iframe{
 }
 
 #telegramIcon{
-	background-image: url(./res/telegramIcon.png);
+	background-image: url(./res/telegramIcon.webp);
 	filter: saturate(0) brightness(0.9);
 }
 
@@ -436,7 +436,7 @@ iframe{
 }
 
 #imdbIcon{
-	background-image: url(./res/imdbIcon.png);
+	background-image: url(./res/imdbIcon.webp);
 	filter: saturate(0) brightness(0.8);
 }
 
@@ -446,7 +446,7 @@ iframe{
 }
 
 #gamebananaIcon{
-	background-image: url(./res/gamebananaIcon.png);
+	background-image: url(./res/gamebananaIcon.webp);
 	filter: saturate(0) brightness(0.7);
 }
 
@@ -456,7 +456,7 @@ iframe{
 }
 
 #discordIcon{
-	background-image: url(./res/discordIcon.png);
+	background-image: url(./res/discordIcon.webp);
 	filter: saturate(0) brightness(1.3);
 }
 
@@ -466,7 +466,7 @@ iframe{
 }
 
 #personalWebsiteIcon{
-	background-image: url(./res/personalWebsiteIcon.png);
+	background-image: url(./res/personalWebsiteIcon.webp);
 	filter: saturate(0) brightness(0.55);
 }
 
@@ -476,7 +476,7 @@ iframe{
 }
 
 #awesomeWebsiteIcon{
-	background-image: url(./res/Sorlag.png);
+	background-image: url(./res/Sorlag.webp);
 	filter: saturate(0) brightness(1.2);
 }
 
