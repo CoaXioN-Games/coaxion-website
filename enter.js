@@ -109,6 +109,12 @@ document.addEventListener("visibilitychange", handleVisibilityChange);
 //sounds
 let soundPlaying = false;
 function playSound(sound) {
+	//prevents hover sound from playing on smaller screens
+	if (sound === './res/hover.mp3'){
+		if (screen.width < 1053){
+			return;
+		};
+	};
 	if (sound === './res/click.mp3' || sound === './res/hover.mp3'){
 		var audio = new Audio(sound);
 		audio.play();
