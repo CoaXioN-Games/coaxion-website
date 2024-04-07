@@ -77,7 +77,7 @@ window.onload = function(){
 
 
 //music
-let mainMusic = new Audio('./res/CoaXioNLowSampleRate.ogg');
+let mainMusic = new Audio('./res/CoaXioNTrackNo.1LowSampleRate.ogg');
 
 function music() {
 	if (mainMusic.paused === false){
