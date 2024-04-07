@@ -49,7 +49,7 @@ iframe{
 	padding: 8px;
 	background-image: url(./res/bg.webp);
 	background-attachment: fixed;
-	animation: slide 2000s infinite;
+	/*animation: slide 2000s infinite;*/
 }
 
 #screenCover{
@@ -855,7 +855,7 @@ iframe{
 
 /* animations */
 
-@keyframes slide {
+/* @keyframes slide {
     from {background-position: 0%}
     to {background-position: 1000%}
-}
+}*/
