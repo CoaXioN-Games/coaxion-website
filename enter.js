@@ -190,7 +190,7 @@ function loadPageContents(name) {
 	  document.body.appendChild(script2);
 	};
 	//back to page load
-	if (name === 'home' || name === 'deathmatch_classic_refragged' || name === 'lambda_fortress' || name === 'the_espionage_project' || name === 'credits' || name === 'error'){
+	if (name === 'home' || name === 'deathmatch_classic_refragged' || name === 'lambda_fortress' || name === 'the_espionage_project' || name === 'coplay' || name === 'credits' || name === 'error'){
 		initGoatCounterFr();
 		//fetches html file
 		fetch("./" + [name] + ".html")
