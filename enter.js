@@ -297,6 +297,11 @@ function pageSpecificChanges(page){
 			icon.style.filter = "saturate(1) brightness(1)";
 			initCarousel();
 			break;
+		case "coplay":
+            topBarColor.style.borderColor = "rgb(170 255 0)";
+			resetIcons();
+			initCarousel();
+			break;
 		default:
 			resetIcons();
 			break;
