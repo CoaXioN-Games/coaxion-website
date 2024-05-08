@@ -262,7 +262,7 @@ function pageSpecificChanges(page){
 	switch(page){
 		case "home":
 			//just to make home look more normal, i got rid of its search parameter
-            topBarColor.style.borderColor = "white";
+            topBarColor.style.borderColor = "#a9a9a9";
 			const url = new URL(window.location);
 			url.searchParams.delete('');
 			window.history.pushState({}, '', url);
@@ -298,7 +298,7 @@ function pageSpecificChanges(page){
 			initCarousel();
 			break;
 		case "coplay":
-            topBarColor.style.borderColor = "rgb(170 255 0)";
+            topBarColor.style.borderColor = "rgb(146 215 0)";
 			resetIcons();
 			initCarousel();
 			break;

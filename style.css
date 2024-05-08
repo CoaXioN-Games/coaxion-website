@@ -509,6 +509,16 @@ iframe{
 	margin-bottom: 40px;
 }
 
+.logoBanner{
+	display: block;
+	width: 70%;
+	max-width: 900px;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+}
+
 .infoCard{
 	font-family: verdana;
 	max-width: 800px;
