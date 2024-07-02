@@ -17,6 +17,13 @@ h2{
 	/*filter: drop-shadow(0px 0px 4px wheat);*/
 }
 
+h3{
+	font-family: little-pixel;
+	color: #cccccc;
+	font-size: 13px;
+	/*filter: drop-shadow(0px 0px 4px wheat);*/
+}
+
 p{
 	font-family: little-pixel;
 	color: #a9a9a9;
@@ -37,6 +44,10 @@ li{
 	color: #a9a9a9;
 	font-size: 9px;
 	line-height: 15px;
+}
+
+u{
+	text-decoration: none;
 }
 
 iframe{
@@ -269,6 +280,21 @@ iframe{
 }
 
 #tepIcon:hover{
+	filter: saturate(1)brightness(1) !important;
+	cursor: pointer;
+	border: solid;
+	border-image-source: url('./res/selector.svg');
+	border-image-slice: 5%
+}
+
+#coplayIcon{
+	background-image: url(./res/coplayIcon.webp);
+	filter: saturate(0);
+	border: solid;
+	border-color: transparent;
+}
+
+#coplayIcon:hover{
 	filter: saturate(1)brightness(1) !important;
 	cursor: pointer;
 	border: solid;

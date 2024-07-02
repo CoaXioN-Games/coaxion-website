@@ -300,6 +300,8 @@ function pageSpecificChanges(page){
 		case "coplay":
             topBarColor.style.borderColor = "rgb(146 215 0)";
 			resetIcons();
+			icon = document.getElementById("coplayIcon");
+			icon.style.filter = "saturate(1) brightness(1)";
 			initCarousel();
 			break;
 		default:
@@ -411,9 +413,11 @@ function resetIcons(){
 	dmcrIcon = document.getElementById("dmcrIcon");
 	lfIcon = document.getElementById("lfIcon");
 	tepIcon = document.getElementById("tepIcon");
+	coplayIcon = document.getElementById("coplayIcon");
 	dmcrIcon.style.filter = "saturate(0) brightness(1.6)";
 	lfIcon.style.filter = "saturate(0)";
 	tepIcon.style.filter = "saturate(0)";
+	coplayIcon.style.filter = "saturate(0)";
 };
 
 //mobile scroll physics
