@@ -111,5 +111,16 @@
 			"trueUrl" : "./blogs/legacy_lambda_fortress_extended/update_5_information_2.html",
 			"thumbnailUrl": "./res/blogImages/legacy_lambda_fortress_extended/thumb6.webp"
 		}
+	],
+	"the_espionage_project":
+	[
+		{
+			"title" : "TEP Status Update #1",
+			"description" : "All assets and no code makes Dave a dull boy",
+			"date" : "11/16/24",
+			"contentUrl": "the_espionage_project-tep_status_update_1",
+			"trueUrl" : "./blogs/the_espionage_project/tep_status_update_1.html",
+			"thumbnailUrl": "./res/blogImages/tepThumb1.jpg"
+		}
 	]
 }
