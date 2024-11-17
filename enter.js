@@ -345,6 +345,9 @@ function retreiveBlogList(){
 			case "lfList":
 				blogTypeName = 'lambda_fortress';
 				break;
+			case "tepList":
+				blogTypeName = 'the_espionage_project';
+				break;
 		};
 		let totalPostCount = fullBlogList[blogTypeName].length;
 		for (let i = 0; i <= totalPostCount -1; i++){

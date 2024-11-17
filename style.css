@@ -11,23 +11,23 @@ h1{
 }
 
 h2{
-	font-family: little-pixel;
+	font-family: pixel-operator;
 	color: #cccccc;
-	font-size: 15px;
+	font-size: 25px;
 	/*filter: drop-shadow(0px 0px 4px wheat);*/
 }
 
 h3{
-	font-family: little-pixel;
+	font-family: pixel-operator;
 	color: #cccccc;
-	font-size: 13px;
+	font-size: 20px;
 	/*filter: drop-shadow(0px 0px 4px wheat);*/
 }
 
 p{
-	font-family: little-pixel;
+	font-family: pixel-operator;
 	color: #a9a9a9;
-	font-size: 9px;
+	font-size: 18px;
 	line-height: 15px;
 }
 
@@ -40,9 +40,9 @@ a:visited{
 }
 
 li{
-	font-family: little-pixel;
+	font-family: pixel-operator;
 	color: #a9a9a9;
-	font-size: 9px;
+	font-size: 14px;
 	line-height: 15px;
 }
 
@@ -586,11 +586,12 @@ iframe{
 }
 
 .imageCarousel img{
-	width: calc(100%);
+	width: calc(100%) !important;
+	max-height: none !important;
 }
 
 #imageHidden{
-	display: none;
+	display: none !important;
 }
 
 .imageCarouselBottom{
@@ -678,13 +679,13 @@ iframe{
 
 .postPreviewText h2{
 	margin-top: 0px;
-	font-family: little-pixel;
-	font-size: 8px;
+	font-family: pixel-operator;
+	font-size: 16px;
 	color: #cccccc;
 }
 
 .postPreviewText p{
-	font-size: 8px;
+	font-size: 12px;
 	margin: 0px;
 }
 
@@ -856,6 +857,10 @@ iframe{
 	src: url(./res/ABSTRACT.TTF);
 }
 
+@font-face{
+	font-family: pixel-operator;
+	src: url(./res/PixelOperator.ttf);
+}
 
 /*scrollbar land*/
 
