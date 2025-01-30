@@ -572,6 +572,22 @@ iframe{
 	background-color: #141414;
 }
 
+.footerShortcuts{
+	display: flex;
+	justify-content: space-around;
+	width: 800px;
+	max-width: 94vw;
+}
+
+@media screen and (max-width: 1053px) {
+	.footerShortcuts{
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 800px;
+		max-width: 94vw;
+	}
+}
+
 /*game page stuff*/
 .imageCarousel {
     font-family: verdana;
@@ -722,12 +738,6 @@ iframe{
   .thirdImage {
       max-height: 63px !important;
   }
-.shortcuts {
-    display: flex;
-    justify-content: space-around;
-    width: 800px;
-    max-width: 40vw;
-}
 }
 
 .imageRow{
