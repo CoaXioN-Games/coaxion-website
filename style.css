@@ -311,16 +311,6 @@ iframe{
 
 /*social icons*/
 
-#twitterIcon{
-	background-image: url(./res/twitterIcon.webp);
-	filter: saturate(0);
-}
-
-#twitterIcon:hover{
-	cursor: pointer;
-	filter: saturate(1);
-}
-
 #youtubeIcon{
 	background-image: url(./res/youtubeIcon.webp);
 	filter: saturate(0) brightness(1.6);
@@ -389,16 +379,6 @@ iframe{
 #tiktokIcon:hover{
 	filter: saturate(1) contrast(1) brightness(1);
 	cursor: pointer;
-}
-
-#twitchIcon{
-	background-image: url(./res/twitchIcon.webp);
-	filter: saturate(0) brightness(1.4);
-}
-
-#twitchIcon:hover{
-	cursor: pointer;
-	filter: saturate(1);
 }
 
 #artstationIcon{
