@@ -332,46 +332,51 @@ function retreiveBlogList(){
 	};
 	//what to do if
 	function buildBlogList(){
-		let postListElement = document.getElementsByClassName("blogPostList")[0];
-		let blogType = postListElement.id;
-		let blogTypeName = '';
-		switch(blogType){
-			case "dmcrList":
-				blogTypeName = 'deathmatch_classic_refragged';
-				break;
-			case "llfeList":
-				blogTypeName = 'legacy_lambda_fortress_extended';
-				break;
-			case "lfList":
-				blogTypeName = 'lambda_fortress';
-				break;
-			case "tepList":
-				blogTypeName = 'the_espionage_project';
-				break;
-		};
-		let totalPostCount = fullBlogList[blogTypeName].length;
-		for (let i = 0; i <= totalPostCount -1; i++){
-			let post = document.createElement("div");
-			post.classList.add("postPreview");
-			let thumbnail = document.createElement("img");
-			thumbnail.src = fullBlogList[blogTypeName][i].thumbnailUrl;
-			post.appendChild(thumbnail);
-			let previewTextDiv = document.createElement("div");
-			previewTextDiv.classList.add("postPreviewText");
-			let title = document.createElement("h2");
-			title.innerHTML = fullBlogList[blogTypeName][i].title;
-			let postUrl = fullBlogList[blogTypeName][i].contentUrl;
-			post.setAttribute('onclick', "loadPageContents('" + postUrl + "')");
-			previewTextDiv.appendChild(title);
-			let date = document.createElement("p");
-			date.innerHTML = fullBlogList[blogTypeName][i].date;
-			previewTextDiv.appendChild(date);
-			let description = document.createElement("p");
-			description.innerHTML = fullBlogList[blogTypeName][i].description;
-			previewTextDiv.appendChild(description);
-			post.appendChild(previewTextDiv);
-			post.style.order = -i;
-			postListElement.appendChild(post);
+		let elements = document.getElementsByClassName("blogPostList");
+		let blogCount = elements.length;
+		console.log(blogCount);
+		for (let i = 0; i < blogCount; i++) {
+			let postListElement = document.getElementsByClassName("blogPostList")[i];
+			let blogType = postListElement.id;
+			let blogTypeName = '';
+			switch(blogType){
+				case "dmcrList":
+					blogTypeName = 'deathmatch_classic_refragged';
+					break;
+				case "llfeList":
+					blogTypeName = 'legacy_lambda_fortress_extended';
+					break;
+				case "lfList":
+					blogTypeName = 'lambda_fortress';
+					break;
+				case "tepList":
+					blogTypeName = 'the_espionage_project';
+					break;
+			};
+			let totalPostCount = fullBlogList[blogTypeName].length;
+			for (let i = 0; i <= totalPostCount -1; i++){
+				let post = document.createElement("div");
+				post.classList.add("postPreview");
+				let thumbnail = document.createElement("img");
+				thumbnail.src = fullBlogList[blogTypeName][i].thumbnailUrl;
+				post.appendChild(thumbnail);
+				let previewTextDiv = document.createElement("div");
+				previewTextDiv.classList.add("postPreviewText");
+				let title = document.createElement("h2");
+				title.innerHTML = fullBlogList[blogTypeName][i].title;
+				let postUrl = fullBlogList[blogTypeName][i].contentUrl;
+				post.setAttribute('onclick', "loadPageContents('" + postUrl + "')");
+				previewTextDiv.appendChild(title);
+				let date = document.createElement("p");
+				date.innerHTML = fullBlogList[blogTypeName][i].date;
+				previewTextDiv.appendChild(date);
+				let description = document.createElement("p");
+				description.innerHTML = fullBlogList[blogTypeName][i].description;
+				previewTextDiv.appendChild(description);
+				post.appendChild(previewTextDiv);
+				post.style.order = -i;
+				postListElement.appendChild(post);
+			};
 		};
 	};
 };
