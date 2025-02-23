@@ -45,12 +45,12 @@
 	"lambda_fortress":
 	[
 		{
-			"title" : "",
-			"description" : "",
-			"date" : "",
-			"contentUrl": "",
-			"trueUrl" : "",
-			"thumbnailUrl": ""
+			"title" : "The future of Lambda Fortress is bright",
+			"description" : "A long overdue status update.",
+			"date" : "02/23/25",
+			"contentUrl": "lambda_fortress-lf_status_update_1",
+			"trueUrl" : "./blogs/lambda_fortress/lf_status_update_1.html",
+			"thumbnailUrl": "./res/blogImages/lfThumb1.jpg"
 		}
 	],
 	"legacy_lambda_fortress_extended":
