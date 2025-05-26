@@ -266,10 +266,12 @@ function pageSpecificChanges(page){
 			const url = new URL(window.location);
 			url.searchParams.delete('');
 			window.history.pushState({}, '', url);
+			bgSet('./res/bg.webp');
 			resetIcons();
 			break;
 		case "error":
 			resetIcons();
+			bgSet('./res/bg.webp');
 			break;
 		case "deathmatch_classic_refragged":
             topBarColor.style.borderColor = "#ec382c";
@@ -277,6 +279,7 @@ function pageSpecificChanges(page){
 			icon = document.getElementById("dmcrIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
 			initCarousel();
+			bgSet('./res/DMCRbg.webp');
 			break;
 		case "lambda_fortress":
             topBarColor.style.borderColor = "rgb(248, 176, 50)";
@@ -284,11 +287,13 @@ function pageSpecificChanges(page){
 			icon = document.getElementById("lfIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
 			initCarousel();
+			bgSet('./res/LFbg.webp');
 			break;
 		case "legacy_lambda_fortress_extended":
 			resetIcons();
 			icon = document.getElementById("lfIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
+			bgSet('./res/LFbg.webp');
 			break;
 		case "the_espionage_project":
             topBarColor.style.borderColor = "#3a6be9";
@@ -296,14 +301,13 @@ function pageSpecificChanges(page){
 			icon = document.getElementById("tepIcon");
 			icon.style.filter = "saturate(1) brightness(1)";
 			initCarousel();
+			bgSet('./res/TEPbg.webp');
 			break;
-		//case "coplay":
-        //    topBarColor.style.borderColor = "rgb(146 215 0)";
-		//	resetIcons();
-		//	icon = document.getElementById("coplayIcon");
-		//	icon.style.filter = "saturate(1) brightness(1)";
-		//	initCarousel();
-		//	break;
+		case "coplay":
+            topBarColor.style.borderColor = "rgb(146 215 0)";
+			resetIcons();
+			bgSet('./res/COPLAYbg.webp');
+			break;
 		default:
 			resetIcons();
 			break;
@@ -427,6 +431,12 @@ function resetIcons(){
 	tepIcon.style.filter = "saturate(0)";
 	//coplayIcon.style.filter = "saturate(0)";
 };
+
+//changes background image
+function bgSet(imageUrl){
+	let bg = document.getElementById('contentWrap');
+	bg.style.backgroundImage = 'url(' + imageUrl + ')';
+}
 
 //mobile scroll physics
 if (screen.width < 1053){
