@@ -51,6 +51,14 @@
 			"contentUrl": "lambda_fortress-lf_status_update_1",
 			"trueUrl" : "./blogs/lambda_fortress/lf_status_update_1.html",
 			"thumbnailUrl": "./res/blogImages/lfThumb1.jpg"
+		},
+		{
+			"title" : "Clearing the Steam", 
+			"description" : "The Steam page is up, whats next?",
+			"date" : "06/04/25",
+			"contentUrl": "lambda_fortress-lf_status_update_2",
+			"trueUrl" : "./blogs/lambda_fortress/lf_status_update_2.html",
+			"thumbnailUrl": "./res/blogImages/lfThumb2.png"
 		}
 	],
 	"legacy_lambda_fortress_extended":
