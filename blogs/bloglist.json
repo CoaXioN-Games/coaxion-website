@@ -59,6 +59,14 @@
 			"contentUrl": "lambda_fortress-lf_status_update_2",
 			"trueUrl" : "./blogs/lambda_fortress/lf_status_update_2.html",
 			"thumbnailUrl": "./res/blogImages/lfThumb2.png"
+		},
+		{
+			"title" : "A Bunch of Cool Stuff!", 
+			"description" : "Crazy I know!",
+			"date" : "09/21/25",
+			"contentUrl": "lambda_fortress-lf_status_update_3",
+			"trueUrl" : "./blogs/lambda_fortress/lf_status_update_3.html",
+			"thumbnailUrl": "./res/blogImages/lfThumb3.png"
 		}
 	],
 	"legacy_lambda_fortress_extended":
