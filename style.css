@@ -635,10 +635,11 @@ iframe{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
+    max-width: 100%;
     max-height: 400px;
-    max-width: none;
     width: auto;
     height: auto;
+    object-fit: contain;
 }
 
 .blogPostList{
@@ -703,7 +704,7 @@ iframe{
 /* phone fix */
 @media only screen and (max-width: 600px) {
   #articlecontent img {
-      max-height: 190px;
+      max-height: 520px;
   }
   .fullImage {
       max-height: 190px !important;
@@ -736,13 +737,13 @@ iframe{
 }
 
 .imageInRow img{
-	min-width:0;
-	display: block;
-	margin-top: 0px!important;
+    min-width:0;
+    display: block;
+    margin-top: 0px!important;
 	margin-left: 0px!important;
 	margin-right: 0px!important;
 	margin-bottom: 0px !important;
-	width: 100%!important;
+    width: 100%!important;
 	height: 100%!important;
 	object-fit: cover;
 }
