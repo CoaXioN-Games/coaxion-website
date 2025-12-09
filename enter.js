@@ -172,6 +172,7 @@ function loadPageContents(name) {
 			append: '#stats',
 			no_branding: true,
 			style: `
+			  body { padding: 0; margin: 0; background-color: #141414; }
 			  div { border-color: transparent; background-color: #141414; color: #888888; border-radius: 0px; }
 			  #gcvc-views { font-family: monospace; }
 			  #gcvc-for { color: #888888; }
