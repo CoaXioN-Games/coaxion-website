@@ -165,24 +165,50 @@ function loadPageContents(name) {
 	window.history.pushState({}, '', url);
 	//goatcounter inserted
 	function initGoatCounter() {
-		var t = setInterval(function() {
-		if (window.goatcounter && window.goatcounter.visit_count) {
-		  clearInterval(t);
-		  window.goatcounter.visit_count({
-			append: '#stats',
-			no_branding: true,
-			style: `
-			  body { padding: 0; margin: 0; background-color: #141414; }
-			  div { border-color: transparent; background-color: #141414; color: #888888; border-radius: 0px; }
-			  #gcvc-views { font-family: monospace; }
-			  #gcvc-for { color: #888888; }
-			`
-		  });
+		function removeSpaces(x) {
+			return x.replace(/\s/g, '');
 		}
-	  }, 100);
+
+		function numberWithCommas(x) {
+			return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+		}
+
+		// Get current path.
+		var get_path = function() {
+			var loc = location,
+				c = document.querySelector('link[rel="canonical"][href]')
+			if (c) {  // May be relative or point to different domain.
+				var a = document.createElement('a')
+				a.href = c.href
+				if (a.hostname.replace(/^www\./, '') === location.hostname.replace(/^www\./, ''))
+					loc = a
+			}
+			return (loc.pathname + loc.search) || '/'
+		}
+
+		//visitor counter text before the json is loaded
+		document.querySelector('#stats').innerText = "disable adblock to view"
+
+		let r = new XMLHttpRequest();
+		r.addEventListener('load', function() {
+			document.querySelector('#stats').innerText = numberWithCommas(removeSpaces(JSON.parse(this.responseText).count));
+		})
+
+		// Should be exact (encoded) path as it appears in the UI. This uses
+		// GoatCounter's count.js
+		//let path = window.goatcounter.get_data()['p']
+
+		let path = get_path()
+
+		// Or alternatively, do it manually. Will return HTTP status 404 if the
+		// path is not found).
+		//let path = location.pathname
+
+		r.open('GET', 'https://coaxion.goatcounter.com/counter/' + encodeURIComponent(path) + '.json')
+		r.send()
 	};
 	function initGoatCounterFr() {
-	  document.getElementById('stats').innerHTML ="<div style='position:relative; z-index:1; width:200px; height:25px; text-align:center; background-color:#141414; margin-bottom:-25px;'><p>Total Page Views:</p></div><div style='position:absolute; width:200px; height:50px; text-align:center; padding-top:20px;'><p>disable adblock to view</p></div>";
+	  //document.getElementById('stats').innerHTML ="<div style='position:relative; z-index:1; width:200px; height:25px; text-align:center; background-color:#141414; margin-bottom:-25px;'><p>Total Page Views:</p></div><div style='position:absolute; width:200px; height:50px; text-align:center; padding-top:20px;'><p>disable adblock to view</p></div>";
 	  initGoatCounter();
 	  var script2 = document.createElement('script');
 	  script2.dataset.goatcounter = 'https://coaxion.goatcounter.com/count';
