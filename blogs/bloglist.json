@@ -129,6 +129,14 @@
 			"contentUrl": "the_espionage_project-tep_status_update_1",
 			"trueUrl" : "./blogs/the_espionage_project/tep_status_update_1.html",
 			"thumbnailUrl": "./res/blogImages/tepThumb1.jpg"
+		},
+		{
+			"title" : "TEP Status Update #2",
+			"description" : "As one door closes, another opens…",
+			"date" : "12/19/25",
+			"contentUrl": "the_espionage_project-tep_status_update_2",
+			"trueUrl" : "./blogs/the_espionage_project/tep_status_update_2.html",
+			"thumbnailUrl": "./res/blogImages/tepThumb2.jpg"
 		}
 	]
 }
