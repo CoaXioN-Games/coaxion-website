@@ -51,10 +51,10 @@ function closeEnterScreen(){
 
 //bring him back
 function resuscitate(){
-	guyHealth++;
+	guyHealth += 5;
 	writeCookie('guyHealth', guyHealth);
 	console.log(guyHealth + "/" + "100");
-	if (guyHealth == guyHealthMax){
+	if (guyHealth >= guyHealthMax){
 		deleteCookie('guyHealth');
 		document.getElementsByClassName('playbackButton')[0].setAttribute('onclick', "music()");
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/vibing.gif')";
