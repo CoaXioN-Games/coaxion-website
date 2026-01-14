@@ -20,7 +20,8 @@ function transitionScreen(){
 };
 //for if you killed him
 let guyStatus = 'alive';
-let guyHealth = 100;
+let guyHealthMax = 100;
+let guyHealth = guyHealthMax;
 if (readCookie('guyHealth')){
 	guyStatus = 'dead';
 	guyHealth = parseInt(readCookie('guyHealth'), 10);
@@ -52,8 +53,8 @@ function closeEnterScreen(){
 function resuscitate(){
 	guyHealth++;
 	writeCookie('guyHealth', guyHealth);
-	console.log(guyHealth + "/100");
-	if (guyHealth > 99){
+	console.log(guyHealth + "/" + String(guyHealthMax));
+	if (guyHealth == guyHealthMax){
 		deleteCookie('guyHealth');
 		document.getElementsByClassName('playbackButton')[0].setAttribute('onclick', "music()");
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/vibing.gif')";
@@ -94,7 +95,7 @@ function music() {
 //music stops when tab not focused
 const handleVisibilityChange = function() {
     if (document.visibilityState === 'visible') {
-		if (readCookie('guyHealth') < 100){
+		if (readCookie('guyHealth') < guyHealthMax){
 			return;
 		}
 		if (readCookie('muteMusic') != 'true') {
