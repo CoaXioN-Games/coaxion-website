@@ -53,7 +53,7 @@ function closeEnterScreen(){
 function resuscitate(){
 	guyHealth++;
 	writeCookie('guyHealth', guyHealth);
-	console.log(guyHealth + "/" + String(guyHealthMax));
+	console.log(guyHealth + "/" + "100");
 	if (guyHealth == guyHealthMax){
 		deleteCookie('guyHealth');
 		document.getElementsByClassName('playbackButton')[0].setAttribute('onclick', "music()");
