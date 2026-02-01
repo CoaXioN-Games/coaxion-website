@@ -205,7 +205,7 @@ function loadPageContents(name) {
 		// path is not found).
 		//let path = location.pathname
 
-		r.open('GET', 'https://counter.coaxion.games/' + encodeURIComponent(path) + '.json')
+		r.open('GET', 'https://counter.coaxion.games/counter/' + encodeURIComponent(path) + '.json')
 		r.send()
 	};
 	function initGoatCounterFr() {
