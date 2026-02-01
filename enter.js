@@ -51,7 +51,7 @@ function closeEnterScreen(){
 
 //bring him back
 function resuscitate(){
-	guyHealth += 5;
+	guyHealth += 10;
 	writeCookie('guyHealth', guyHealth);
 	console.log(guyHealth + "/" + "100");
 	if (guyHealth >= guyHealthMax){
