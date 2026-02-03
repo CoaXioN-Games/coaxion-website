@@ -7,16 +7,19 @@ function openEnterScreen() {
 };
 
 //transition effect
+let displaytimeout = 800;
+let displaytimeoutHandle = setTimeout(displaytimeout);
 function transitionScreen(){
 	screenCover = document.getElementById('transitionScreen');
 	screenCover.style.opacity = .5;
 	screenCover.style.display = "block";
+	clearTimeout(displaytimeoutHandle);
 	setTimeout(()=>{
 		screenCover.style.opacity = 0;
 	}, 300);
-	setTimeout(()=>{
+	displaytimeoutHandle = setTimeout(()=>{
 		screenCover.style.display = "none";
-	}, 800);
+	}, displaytimeout);
 };
 //for if you killed him
 let guyStatus = 'alive';
