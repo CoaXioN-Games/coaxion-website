@@ -69,7 +69,6 @@ iframe{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 1024px;
-	filter: saturate(0) brightness(2);
 	image-rendering: pixelated;
 	z-index: 4;
 	transition: all 0.5s ease;
