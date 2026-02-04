@@ -215,9 +215,14 @@ function loadPageContents(name) {
 	  //document.getElementById('stats').innerHTML ="<div style='position:relative; z-index:1; width:200px; height:25px; text-align:center; background-color:#141414; margin-bottom:-25px;'><p>Total Page Views:</p></div><div style='position:absolute; width:200px; height:50px; text-align:center; padding-top:20px;'><p>disable adblock to view</p></div>";
 	  initViewCounter();
 	  var script2 = document.createElement('script');
+	  script2.setAttribute("id", "goatcounter");
+	  var script2Element = document.getElementById("goatcounter");
 	  script2.dataset.goatcounter = 'https://counter.coaxion.games/count';
 	  script2.async = true;
 	  script2.src = './count.js';
+	  if (script2Element) {
+		script2Element.remove();
+	  }
 	  document.body.appendChild(script2);
 	};
 	//back to page load
