@@ -211,9 +211,18 @@ function loadPageContents(name) {
 		r.open('GET', 'https://counter.coaxion.games/counter/' + encodeURIComponent(path) + '.json')
 		r.send()
 	};
+	function initGoatCounterFr() {
+	  //document.getElementById('stats').innerHTML ="<div style='position:relative; z-index:1; width:200px; height:25px; text-align:center; background-color:#141414; margin-bottom:-25px;'><p>Total Page Views:</p></div><div style='position:absolute; width:200px; height:50px; text-align:center; padding-top:20px;'><p>disable adblock to view</p></div>";
+	  initGoatCounter();
+	  var script2 = document.createElement('script');
+	  script2.dataset.goatcounter = 'https://counter.coaxion.games/count';
+	  script2.async = true;
+	  script2.src = './count.js';
+	  document.body.appendChild(script2);
+	};
 	//back to page load
 	if (name === 'home' || name === 'deathmatch_classic_refragged' || name === 'lambda_fortress' || name === 'the_espionage_project' || name === 'coplay' || name === 'credits' || name === 'error'){
-		initGoatCounter();
+		initGoatCounterFr();
 		//fetches html file
 		fetch("./" + [name] + ".html")
 		.then(response => response.text())
@@ -227,7 +236,7 @@ function loadPageContents(name) {
 		});
 	//for fetching blog pages
 	} else if(name.search('-') > -1){
-		initGoatCounter();
+		initGoatCounterFr();
 		postName = name.substring(name.search("-") + 1, name.length);
 		game = name.substring(0, name.search("-"));
 		//normal page fetch but it puts it in a card
