@@ -67,6 +67,14 @@
 			"contentUrl": "lambda_fortress-lf_status_update_3",
 			"trueUrl" : "./blogs/lambda_fortress/lf_status_update_3.html",
 			"thumbnailUrl": "./res/blogImages/lfThumb3.png"
+		},
+		{
+			"title" : "Getting It Together", 
+			"description" : "&quot;Better and Better!&quot;",
+			"date" : "03/15/26",
+			"contentUrl": "lambda_fortress-lf_status_update_4",
+			"trueUrl" : "./blogs/lambda_fortress/lf_status_update_4.html",
+			"thumbnailUrl": "./res/blogImages/lfThumb4.png"
 		}
 	],
 	"legacy_lambda_fortress_extended":
