@@ -184,6 +184,7 @@ iframe{
 	filter: invert(1);
 	mix-blend-mode: screen;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .deadGuy{
