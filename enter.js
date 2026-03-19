@@ -432,7 +432,7 @@ function initCarousel(){
 	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
 };
 function nextImage(){
-	playSound('./res/click2.mp3');
+	//playSound('./res/click2.mp3');
 	let currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
 	currentImageElement.id = "imageHidden";
 	currentImage++;
@@ -443,7 +443,7 @@ function nextImage(){
 	document.getElementsByClassName("imageNumber")[0].innerHTML = "<p>" + [currentImage + 1] + "/" + totalImages + "</p>";
 };
 function previousImage(){
-	playSound('./res/click2.mp3');
+	//playSound('./res/click2.mp3');
 	let currentImageElement = document.getElementsByClassName("carouselImage")[currentImage];
 	currentImageElement.id = "imageHidden";
 	--currentImage;
