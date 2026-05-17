@@ -566,6 +566,15 @@ iframe{
 }
 
 /*game page stuff*/
+.wallpaperGrid{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.wallpaperThumbnail img{
+	height: 13em;
+	margin: .5em;
+}
 .imageCarousel {
     font-family: verdana;
     max-width: 800px;
@@ -626,6 +635,10 @@ iframe{
 @media screen and (max-width: 1053px) {
 	.carouselButton:hover{
 		color: #a9a9a9;
+	}
+	.wallpaperThumbnail img{
+		max-width: 100%;
+		height: auto;
 	}
 }
 
