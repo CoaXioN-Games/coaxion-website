@@ -677,6 +677,11 @@ iframe{
 	cursor: pointer;
 }
 
+.postPreview img {
+    width: 120px;
+    height: 90px;
+}
+
 .postPreviewText{
 	padding: 3px 8px;
 	display: flex;

@@ -40,6 +40,14 @@
 			"contentUrl": "deathmatch_classic_refragged-development_update_5",
 			"trueUrl" : "./blogs/deathmatch_classic_refragged/development_update_5.html",
 			"thumbnailUrl": "./res/blogImages/dmcrThumb5.gif"
+		},
+		{
+			"title" : "Deathmatch Classic: Refragged Devlog 6!",
+			"description" : "We're back to show off what we've been doing for the last two years!",
+			"date" : "6/6/26",
+			"contentUrl": "deathmatch_classic_refragged-development_update_6",
+			"trueUrl" : "./blogs/deathmatch_classic_refragged/development_update_6.html",
+			"thumbnailUrl": "./res/blogImages/dmcrThumb6.gif"
 		}
 	],
 	"lambda_fortress":
