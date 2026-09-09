@@ -39,7 +39,7 @@ function closeEnterScreen(){
 		screenCover.style.display = "none";
 	}, 500);
 	//plays music
-	mainMusic.loop = true;
+	musicMain.loop = true;
 	if (guyStatus === 'dead'){
 		document.getElementsByClassName('playbackButton')[0].setAttribute('onclick', "resuscitate()");
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/404.jpg')";
@@ -48,7 +48,7 @@ function closeEnterScreen(){
 		console.log('mute pref = muted');
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/notVibing.gif')";
 	} else {
-		mainMusic.play();
+		musicMain.play();
 	};
 };
 
@@ -66,7 +66,7 @@ function resuscitate(){
 			console.log('mute pref = muted');
 			document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/notVibing.gif')";
 		} else {
-			mainMusic.play();
+			musicMain.play();
 		};
 	};
 };
@@ -81,15 +81,18 @@ window.onload = function(){
 
 
 //music
-let mainMusic = new Audio('./res/CoaXioNTrackNo.1LowSampleRate.ogg');
+const musicPath  =	'./res/';
+const musicFiles =	['CoaXioNTrackNo.1LowSampleRate.ogg', 'CoaXioNTrackNo.1.ogg'];
+let musicMain =	new Audio(musicPath + musicFiles[Math.floor(Math.random() * musicFiles.length)]);
+//console.log(musicMain);
 
 function music() {
-	if (mainMusic.paused === false){
-		mainMusic.pause();
+	if (musicMain.paused === false){
+		musicMain.pause();
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/notVibing.gif')";
 		writeCookie('muteMusic', 'true');
 	} else {
-		mainMusic.play();
+		musicMain.play();
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/vibing.gif')";
 		deleteCookie('muteMusic');
 	}
@@ -102,10 +105,10 @@ const handleVisibilityChange = function() {
 			return;
 		}
 		if (readCookie('muteMusic') != 'true') {
-			mainMusic.play();
+			musicMain.play();
 		};
     } else {
-		mainMusic.pause();
+		musicMain.pause();
     };
 };
 document.addEventListener("visibilitychange", handleVisibilityChange);
@@ -131,12 +134,12 @@ function playSound(sound) {
             soundPlaying = true;
             audio.play();
 			if (readCookie('muteMusic') != 'true'){
-				mainMusic.volume = 0.1;
+				musicMain.volume = 0.1;
 			};
             setTimeout(() => {
                 soundPlaying = false;
 				if (readCookie('muteMusic') != 'true'){
-					mainMusic.volume = 1;
+					musicMain.volume = 1;
 				};
             }, soundLength * 1000);
         };
