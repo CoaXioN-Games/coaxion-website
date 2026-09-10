@@ -82,9 +82,17 @@ window.onload = function(){
 
 //music
 const musicPath  =	'./res/';
-const musicFiles =	['CoaXioNTrackNo.1LowSampleRate.ogg', 'CoaXioNTrackNo.1.ogg'];
-let musicMain =	new Audio(musicPath + musicFiles[Math.floor(Math.random() * musicFiles.length)]);
+const musicArray =	[
+	['CoaXioNTrackNo.1LowSampleRate.ogg', 0.6],
+	['CoaXioNTrackNo.1.ogg', 0.5]
+];
+let musicCurrent = Math.floor(Math.random() * musicArray.length);
+//console.log(musicArray[musicCurrent]);
+
+let musicMain =	new Audio(musicPath + musicArray[musicCurrent][0]);
+musicMain.volume = musicArray[musicCurrent][1];
 //console.log(musicMain);
+//console.log(musicMain.volume);
 
 function music() {
 	if (musicMain.paused === false){
@@ -139,7 +147,7 @@ function playSound(sound) {
             setTimeout(() => {
                 soundPlaying = false;
 				if (readCookie('muteMusic') != 'true'){
-					musicMain.volume = 1;
+					musicMain.volume = musicArray[musicCurrent][1];
 				};
             }, soundLength * 1000);
         };
