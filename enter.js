@@ -39,7 +39,7 @@ function closeEnterScreen(){
 		screenCover.style.display = "none";
 	}, 500);
 	//plays music
-	musicMain.loop = true;
+	//musicMain.loop = true;
 	if (guyStatus === 'dead'){
 		document.getElementsByClassName('playbackButton')[0].setAttribute('onclick', "resuscitate()");
 		document.getElementsByClassName('playbackButton')[0].style.backgroundImage = "url('./res/404.jpg')";
@@ -81,17 +81,27 @@ window.onload = function(){
 
 
 //music
-const musicPath  =	'./res/';
-const musicArray =	[
+const musicPath = './res/';
+const musicArray = [
 	['CoaXioNTrackNo.1LowSampleRate.ogg', 0.6],
 	['CoaXioNTrackNo.1.ogg', 0.5]
 ];
-let musicCurrent = Math.floor(Math.random() * musicArray.length);
-//console.log(musicArray[musicCurrent]);
 
-let musicMain =	new Audio(musicPath + musicArray[musicCurrent][0]);
-musicMain.volume = musicArray[musicCurrent][1];
+let musicMain =	new Audio();
+let musicCurrent;
+
+//shuffle music
+function musicShuffle() {
+	musicCurrent = Math.floor(Math.random() * musicArray.length);
+	musicMain.src = musicPath + musicArray[musicCurrent][0];
+	musicMain.volume = musicArray[musicCurrent][1];
+	//musicMain.playbackRate = 8;
+}
+musicShuffle();
+
+//console.log(musicCurrent);
 //console.log(musicMain);
+//console.log(musicMain.src);
 //console.log(musicMain.volume);
 
 function music() {
@@ -105,6 +115,13 @@ function music() {
 		deleteCookie('muteMusic');
 	}
 };
+
+//shuffle music when it ends
+musicMain.addEventListener("ended", function() {
+	//console.log("ended");
+	musicShuffle();
+	musicMain.play();
+});
 
 //music stops when tab not focused
 const handleVisibilityChange = function() {
