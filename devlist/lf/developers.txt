@@ -1,0 +1,863 @@
+"scripts/developers.txt"
+{
+	///
+	/// NOTE - When user avatar is changed on the server you must recalculate and update the CRC32 for the new image.
+	///
+
+	//
+	// Supported avatar image formats:
+	//
+	//	JPEG
+	//	PNG
+	//	BMP
+	//	TGA
+	//	PSD
+	//	HDR
+	//	PIC
+	//	GIF
+	//	PNM
+	//
+
+	//
+	// Roles Localization HOWTO:
+	//
+	// The Credits Dialog supports localized role descriptions using the following
+	// KeyValues naming convention:
+	//
+	//	roles_<language>
+	//
+	// For example:
+	//
+	//	roles_russian
+	//	roles_french
+	//	roles_german
+	//
+	// The dialog first looks for a role description matching the user's current
+	// Steam language. If a localized entry is not available, it falls back to:
+	//
+	//	roles_english
+	//
+	// If neither the user's language nor the English entry exists, the dialog
+	// falls back to the legacy `roles` key.
+	//
+	// Example:
+	//
+	//	"roles_english"	"Developer"
+	//	"roles_russian"	"Разработчик"
+	//	"roles_german"	"Entwickler"
+	//	"roles"		"Developer" // Legacy fallback
+	//
+	// To add support for a new language, add a `roles_<language>` entry using
+	// the language identifier returned by Steam's GetCurrentGameLanguage().
+	//
+	// The lookup order is:
+	//
+	//	1. roles_<current Steam language>
+	//	2. roles_english
+	//	3. roles
+	//
+
+	//
+	// DEVELOPERS
+	//
+
+	"Category"
+	{
+		"title"				"#LFUI_CreditsCategory_Developers"
+	}
+
+	"MTD"
+	{
+		"roles_english"			"Art, Mapping, UI Design, Video Editing, Steamworks Management"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/MTD.gif"
+			"crc32"			"B2BBE40D"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/MTD_BK"
+				"icon"		"steamIcon"
+			}
+
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/mtd.coaxion.games"
+				"icon"		"blueskyIcon"
+			}
+
+			"lambdagen"
+			{
+				"url"		"https://community.lambdageneration.com/user/mtd"
+				"icon"		"lambdagenIcon"
+			}
+
+			"youtube"
+			{
+				"url"		"https://www.youtube.com/@MTDVideos"
+				"icon"		"youtubeIcon"
+			}
+		}
+	}
+
+	"AlexEpisode"
+	{
+		"roles_english"			"Project Lead, Programming, Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/AlexEpisode.png"
+			"crc32"			"6F09467B"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/AlexEpisode"
+				"icon"		"steamIcon"
+			}
+
+			"moddb"
+			{
+				"url"		"https://www.moddb.com/members/alexepisode"
+				"icon"		"moddbIcon"
+			}
+		}
+	}
+
+	"Stoneman"
+	{
+		"roles_english"			"Project Lead, Programming"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Stoneman.png"
+			"crc32"			"396BD969"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/stonemans"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"Menoly"
+	{
+		"roles_english"			"Concept Art"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Menoly.png"
+			"crc32"			"1737CFCB"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/Menoly"
+				"icon"		"steamIcon"
+			}
+
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/menoly.bsky.social"
+				"icon"		"blueskyIcon"
+			}
+		}
+	}
+
+	"Rahim Ali"
+	{
+		"roles_english"			"Animation Lead, Model Rigging, Website Development"
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Rahim_Ali.jpg"
+			"crc32"			"C486889C"
+		}
+		"socials"
+		{
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/rahimali.net"
+				"icon"		"blueskyIcon"
+			}
+			"personalwebsite"
+			{
+				"url"		"https://rahimali.net"
+				"icon"		"personalWebsiteIcon"
+			}
+		}
+	}
+
+	"AnthonyPython"
+	{
+		"roles_english"			"Programming, Steamworks Management"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/AnthonyPython.png"
+			"crc32"			"BC226923"
+		}
+
+		"socials"
+		{
+			"github"
+			{
+				"url"		"https://github.com/AnthonyPython"
+				"icon"		"githubIcon"
+			}
+		}
+	}
+
+	"Flare145"
+	{
+		"roles_english"			"Website Development, Video Editing"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/FLARE145.png"
+			"crc32"			"AAE130BD"
+		}
+
+		"socials"
+		{
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/flare145.com"
+				"icon"		"blueskyIcon"
+			}
+			"newgrounds"
+			{
+				"url"		"https://flare145.newgrounds.com"
+				"icon"		"newgroundsIcon"
+			}
+			"youtube"
+			{
+				"url"		"https://www.youtube.com/@flare145"
+				"icon"		"youtubeIcon"
+			}
+			"personalwebsite"
+			{
+				"url"		"https://flare145.com"
+				"icon"		"personalWebsiteIcon"
+			}
+		}
+	}
+
+	"bulboxide"
+	{
+		"roles_english"			"UI Design"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/bulboxide.png"
+			"crc32"			"3B33F75E"
+		}
+	}
+
+	"Drgregs"
+	{
+		"roles_english"			"Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Drgregs.png"
+			"crc32"			"86C03D1B"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/profiles/76561198143226512"
+				"icon"		"steamIcon"
+			}
+
+			"github"
+			{
+				"url"		"https://github.com/MarcusKubis9"
+				"icon"		"githubIcon"
+			}
+
+			"moddb"
+			{
+				"url"		"https://www.moddb.com/members/drgregs1"
+				"icon"		"moddbIcon"
+			}
+		}
+	}
+
+	"eno"
+	{
+		"roles_english"			"Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/eno.png"
+			"crc32"			"CEE5C625"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/enothefirst"
+				"icon"		"steamIcon"
+			}
+
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/enothefirst.bsky.social"
+				"icon"		"blueskyIcon"
+			}
+
+			"youtube"
+			{
+				"url"		"https://www.youtube.com/channel/UCgu0BCwROZefaXuCVv-3W-A"
+				"icon"		"youtubeIcon"
+			}
+		}
+	}
+
+	"EntityReport"
+	{
+		"roles_english"			"Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/EntityReport.png"
+			"crc32"			"6586FBFF"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/profiles/76561199004218744"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"GenericTech"
+	{
+		"roles_english"			"Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/GenericTech.png"
+			"crc32"			"6586FBFF"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/unspokengeneric"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"gS arson"
+	{
+		"roles_english"			"Art"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/arson.gif"
+			"crc32"			"ACA484BB"
+		}
+
+		"socials"
+		{
+			"personalwebsite"
+			{
+				"url"		"https://sites.google.com/view/deathknight/dethknigt"
+				"icon"		"personalWebsiteIcon"
+			}
+			"youtube"
+			{
+				"url"		"https://www.youtube.com/@arsongaming"
+				"icon"		"youtubeIcon"
+			}
+		}
+	}
+
+	"Kaleidescoop"
+	{
+		"roles_english"			"Art, Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Kaleidescoop.png"
+			"crc32"			"3A57CC7C"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/kaleidescoop"
+				"icon"		"steamIcon"
+			}
+
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/kaleidescoop.bsky.social"
+				"icon"		"blueskyIcon"
+			}
+
+			"youtube"
+			{
+				"url"		"https://www.youtube.com/@Kaleidescoop"
+				"icon"		"youtubeIcon"
+			}
+		}
+	}
+
+	"lambda20xx"
+	{
+		"roles_english"			"Art, Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/lambda20xx.png"
+			"crc32"			"99366A1B"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/enderpyoman"
+				"icon"		"steamIcon"
+			}
+			"personalwebsite"
+			{
+				"url"		"https://sheezy.art/lambda20xx"
+				"icon"		"personalWebsiteIcon"
+			}
+		}
+	}
+
+	"MAESA"
+	{
+		"roles_english"			"Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Maesa.jpg"
+			"crc32"			"4D9987D2"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/BLACKM3SA"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"Mr0maks"
+	{
+		"roles_english"			"Programming"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Mr0maks.png"
+			"crc32"			"C9CA04EF"
+		}
+	}
+
+	"Nbc66"
+	{
+		"roles_english"			"Programming"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Nbc66.png"
+			"crc32"			"D24F7A3A"
+		}
+
+		"socials"
+		{
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/nbc66.dev"
+				"icon"		"blueskyIcon"
+			}
+
+			"github"
+			{
+				"url"		"https://github.com/Nbc66"
+				"icon"		"githubIcon"
+			}
+		}
+	}
+
+	"Pedrito"
+	{
+		"roles_english"			"Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Pedrito.jpg"
+			"crc32"			"39D86A90"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/PedritoGMG"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"r0nii"
+	{
+		"roles_english"			"Particle FX"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/r0nii.jpg"
+			"crc32"			"8F023072"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/r0nii"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"RzDat"
+	{
+		"roles_english"			"Mapper"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/RzDat.png"
+			"crc32"			"22E47E05"
+		}
+	}
+
+	"SanyaSho"
+	{
+		"roles_english"			"Programming, UI Design, Steamworks Management"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Sanya.png"
+			"crc32"			"C79C4162"
+		}
+	}
+
+	"terminalarch"
+	{
+		"roles_english"			"Programming"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/terminalarch.jpg"
+			"crc32"			"C21EAD2F"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/terminalarch/"
+				"icon"		"steamIcon"
+			}
+
+			"github"
+			{
+				"url"		"https://github.com/terminalarch"
+				"icon"		"githubIcon"
+			}
+		}
+	}
+
+	"Underqualified_gunman"
+	{
+		"roles_english"			"Mapping"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Underqualified_gunman.png"
+			"crc32"			"FCFCF1F9"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/Underqualified_Gunman/"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"v2d2"
+	{
+		"roles_english"			"Art"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/v2d2.png"
+			"crc32"			"E7DBBD8D"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/v2d2"
+				"icon"		"steamIcon"
+			}
+
+			"bluesky"
+			{
+				"url"		"https://bsky.app/profile/v2d2.bsky.social"
+				"icon"		"blueskyIcon"
+			}
+
+			"youtube"
+			{
+				"url"		"https://www.youtube.com/@v2d2"
+				"icon"		"youtubeIcon"
+			}
+		}
+	}
+
+	"Valentin"
+	{
+		"roles_english"			"Animation"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Valentin.jpg"
+			"crc32"			"19B5588D"
+		}
+	}
+
+	"Yandro899"
+	{
+		"roles_english"			"Programmer, Mapper"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/Yandro899.png"
+			"crc32"			"8867894A"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/profiles/76561198372188516"
+				"icon"		"steamIcon"
+			}
+
+			"github"
+			{
+				"url"		"https://github.com/yandro899"
+				"icon"		"githubIcon"
+			}
+
+			"youtube"
+			{
+				"url"		"https://www.youtube.com/@yandr0"
+				"icon"		"youtubeIcon"
+			}
+		}
+	}
+
+
+	//
+	// TRANSLATORS
+	//
+
+	"Category"
+	{
+		"title"				"#LFUI_CreditsCategory_Translators"
+	}
+
+	"Finn5470"
+	{
+		"simple"			"1"
+		"roles_english"			"Simplified Chinese"
+	}
+
+
+	//
+	// SPECIAL THANKS
+	//
+
+	"Category"
+	{
+		"title"				"#LFUI_CreditsCategory_SpecialThanks"
+	}
+
+	"Nicknine"
+	{
+		"roles_english"			"Created the original Lambda Fortress Mod"
+
+		"profile_picture"
+		{
+			"url"			"https://coaxion.games/res/memberProfileImages/special_thanks/Nicknine.jpg"
+			"crc32"			"078A7BBD"
+		}
+
+		"socials"
+		{
+			"steam"
+			{
+				"url"		"https://steamcommunity.com/id/NicknineTheEagle"
+				"icon"		"steamIcon"
+			}
+		}
+	}
+
+	"Kilburn"
+	{
+		"simple"			"1"
+		"roles_english"			"Created some of the original kill icons still used"
+	}
+
+
+	//
+	// CONTRIBUTORS
+	//
+
+	"Category"
+	{
+		"title"				"#LFUI_CreditsCategory_Contributors"
+	}
+
+	"boomsta"
+	{
+		"simple"			"1"
+		"roles_english"			"Laser-Sighted Attachment Model"
+	}
+
+	"fiiv_e"
+	{
+		"simple"			"1"
+		"roles_english"			"Lambda Fortress text logo"
+	}
+
+	"FC Team"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK fixes and additions"
+	}
+
+	"Nooodles"
+	{
+		"simple"			"1"
+		"roles_english"			"Steam-LF fixes and additions"
+	}
+
+	"Crowbar"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Map fixes"
+	}
+
+	"ghostboy1225"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Map fixes"
+	}
+
+	"HDMineFace"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Map fixes"
+	}
+
+	"LordVGames"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Map fixes"
+	}
+
+	"Mastervandeisel"
+	{
+		"simple"			"1"
+		"roles_english"			"Early Animation"
+	}
+
+	"Sniperstyx"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Map fixes"
+	}
+
+	"stakhowsky"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Map fixes"
+	}
+
+	"VVis"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Map fixes"
+	}
+
+	"YOW"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK viewmodel fix"
+	}
+
+	"Cream"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-CoaXioN Dev"
+	}
+
+	"Dr. Seal"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-CoaXioN Dev"
+	}
+
+	"Swox"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-CoaXioN Dev"
+	}
+
+	"Train"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-CoaXioN Dev"
+	}
+
+	"Wonderland_War"
+	{
+		"simple"			"1"
+		"roles_english"			"Pre-SDK Programming and Mapping"
+	}
+}
