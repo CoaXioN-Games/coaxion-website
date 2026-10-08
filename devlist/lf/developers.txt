@@ -661,7 +661,7 @@
 
 	"Yandro899"
 	{
-		"roles_english"			"Programmer, Mapper"
+		"roles_english"			"Programming, Mapping"
 
 		"profile_picture"
 		{
