@@ -57,13 +57,14 @@
 	//	3. roles
 	//
 
+
 	//
 	// DEVELOPERS
 	//
 
 	"Category"
 	{
-		"title"				"#LFUI_CreditsCategory_Developers"
+		"title"				"#LFUI_CreditsCategory_HeadOfCoaXioN"
 	}
 
 	"MTD"
@@ -102,6 +103,11 @@
 				"icon"		"youtubeIcon"
 			}
 		}
+	}
+
+	"Category"
+	{
+		"title"				"#LFUI_CreditsCategory_Developers"
 	}
 
 	"AlexEpisode"
